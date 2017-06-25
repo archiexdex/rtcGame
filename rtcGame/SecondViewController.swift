@@ -10,9 +10,19 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet var myCollectionView: UICollectionView!
+    var list = ["Hello world", "Swift", "UITableView"]
+    var imgList = ["kanahara", "snoopy", "lalabare"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.automaticallyAdjustsScrollViewInsets = true
+        self.myCollectionView.delegate = self
+        self.myCollectionView.dataSource = self
+        
+        let nib = UINib(nibName: "CustomCollectionViewCell", bundle: nil)
+        self.myCollectionView.register(nib, forCellWithReuseIdentifier: "Cell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,5 +31,29 @@ class SecondViewController: UIViewController {
     }
 
 
+}
+
+extension SecondViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return list.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CustomCollectionViewCell
+        
+        cell.theImageView.image = UIImage(named: self.imgList[indexPath.row])
+        cell.theLabel.text = self.list[indexPath.row]
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsetsMake(5, 10, 5, 10)
+    }
 }
 

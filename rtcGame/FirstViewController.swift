@@ -63,7 +63,6 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
         cell.theImageView.image = UIImage(named: self.imgList[indexPath.row])
         cell.theTextView.text = self.list[indexPath.row]
-//        cell.textLabel?.text = self.list[indexPath.row]
 
         return cell
     }

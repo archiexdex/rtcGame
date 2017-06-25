@@ -18,6 +18,8 @@
 		EC8DD14C1EFFC90A0061DE58 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8DD14B1EFFC90A0061DE58 /* FirstViewController.swift */; };
 		EC8DD14E1EFFD1870061DE58 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC8DD14D1EFFD1870061DE58 /* CustomTableViewCell.xib */; };
 		EC8DD1501EFFD6EB0061DE58 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8DD14F1EFFD6EB0061DE58 /* CustomTableViewCell.swift */; };
+		EC8DD15A1EFFE9A20061DE58 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8DD1591EFFE9A20061DE58 /* CustomCollectionViewCell.swift */; };
+		EC8DD15C1EFFF14E0061DE58 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC8DD15B1EFFF14E0061DE58 /* CustomCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		EC8DD14B1EFFC90A0061DE58 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		EC8DD14D1EFFD1870061DE58 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		EC8DD14F1EFFD6EB0061DE58 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		EC8DD1591EFFE9A20061DE58 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		EC8DD15B1EFFF14E0061DE58 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 				EC8DD1471EFAF8330061DE58 /* FifthViewController.swift */,
 				EC8DD14D1EFFD1870061DE58 /* CustomTableViewCell.xib */,
 				EC8DD14F1EFFD6EB0061DE58 /* CustomTableViewCell.swift */,
+				EC8DD15B1EFFF14E0061DE58 /* CustomCollectionViewCell.xib */,
+				EC8DD1591EFFE9A20061DE58 /* CustomCollectionViewCell.swift */,
 				EC8DD1351EFAF80A0061DE58 /* Main.storyboard */,
 				EC8DD1381EFAF80A0061DE58 /* Assets.xcassets */,
 				EC8DD13A1EFAF80A0061DE58 /* LaunchScreen.storyboard */,
@@ -145,6 +151,7 @@
 				EC8DD13C1EFAF80A0061DE58 /* LaunchScreen.storyboard in Resources */,
 				EC8DD1391EFAF80A0061DE58 /* Assets.xcassets in Resources */,
 				EC8DD14E1EFFD1870061DE58 /* CustomTableViewCell.xib in Resources */,
+				EC8DD15C1EFFF14E0061DE58 /* CustomCollectionViewCell.xib in Resources */,
 				EC8DD1371EFAF80A0061DE58 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,6 +166,7 @@
 				EC8DD1481EFAF8330061DE58 /* FifthViewController.swift in Sources */,
 				EC8DD1341EFAF80A0061DE58 /* SecondViewController.swift in Sources */,
 				EC8DD1301EFAF80A0061DE58 /* AppDelegate.swift in Sources */,
+				EC8DD15A1EFFE9A20061DE58 /* CustomCollectionViewCell.swift in Sources */,
 				EC8DD1501EFFD6EB0061DE58 /* CustomTableViewCell.swift in Sources */,
 				EC8DD14C1EFFC90A0061DE58 /* FirstViewController.swift in Sources */,
 				EC8DD1441EFAF8230061DE58 /* ThirdViewController.swift in Sources */,
