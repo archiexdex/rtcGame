@@ -10,8 +10,19 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
 
-    @IBOutlet var theImageView: UIImageView!
-    @IBOutlet var theTextView: UITextView!
+    
+    
+    @IBOutlet var theUserIconImage: UIImageView!
+    @IBOutlet var theUserIDLabel: UILabel!
+    @IBOutlet var theLocationLabel: UILabel!
+    
+    @IBOutlet var theImage: UIImageView!
+    @IBOutlet var theLikeImage: UIImageView!
+    @IBOutlet var theLikeLabel: UILabel!
+    @IBOutlet var theTimeLabel: UILabel!
+    @IBOutlet var theContentLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

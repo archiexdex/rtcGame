@@ -8,11 +8,26 @@
 
 import UIKit
 
+struct userInfo {
+    var iconImageName : String
+    var id : String
+    var location : String
+    var imageName : String
+    var like : String
+    var time : String
+    var content : String
+}
+
 class FirstViewController: UIViewController {
 
     //MARK: - Variable
     @IBOutlet var myTableView: UITableView!
-    var list = ["Hello world", "Swift", "UITableView"]
+    
+    var usrName = ["A", "B", "C"]
+    var locationList = ["taiwan", "taipei", "hsinchu"]
+    var time = "1 hour ago"
+    var like = "10 likes"
+    var contentList = ["Hello\nworld\nI am here\n@W@", "Swift\nhaha\nlala", "UITableView\nis\ngarbage"]
     var imgList = ["kanahara", "snoopy", "lalabare"]
     
     override func viewDidLoad() {
@@ -31,7 +46,8 @@ class FirstViewController: UIViewController {
         
         myTableView.delegate = self
         myTableView.dataSource = self
-//        myTableView.separatorStyle = .none
+        myTableView.separatorStyle = .none
+        myTableView.allowsSelection = false
         
         // Custom TableView Cell
         let nib = UINib(nibName: "CustomTableViewCell", bundle: nil)
@@ -56,13 +72,19 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
     
     //Require
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.count
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
-        cell.theImageView.image = UIImage(named: self.imgList[indexPath.row])
-        cell.theTextView.text = self.list[indexPath.row]
+        cell.theUserIconImage.image = UIImage(named: self.imgList[indexPath.row])
+        cell.theUserIDLabel.text = self.usrName[indexPath.row]
+        cell.theLocationLabel.text = self.locationList[indexPath.row]
+        cell.theImage.image = UIImage(named: self.imgList[indexPath.row])
+        cell.theLikeLabel.text = self.like
+        cell.theTimeLabel.text = self.time
+        cell.theContentLabel.text = self.contentList[indexPath.row]
+
 
         return cell
     }
