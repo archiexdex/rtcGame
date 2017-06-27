@@ -83,8 +83,11 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
         cell.theImage.image = UIImage(named: self.imgList[indexPath.row])
         cell.theLikeLabel.text = self.like
         cell.theTimeLabel.text = self.time
+        
         cell.theContentLabel.text = self.contentList[indexPath.row]
 
+        cell.layoutIfNeeded()
+        cell.theUserIconImage.layer.cornerRadius = cell.theUserIconImage.frame.height / 2
 
         return cell
     }

@@ -20,6 +20,8 @@
 		EC8DD1501EFFD6EB0061DE58 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8DD14F1EFFD6EB0061DE58 /* CustomTableViewCell.swift */; };
 		EC8DD15A1EFFE9A20061DE58 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8DD1591EFFE9A20061DE58 /* CustomCollectionViewCell.swift */; };
 		EC8DD15C1EFFF14E0061DE58 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC8DD15B1EFFF14E0061DE58 /* CustomCollectionViewCell.xib */; };
+		EC8DD1621F027BC10061DE58 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8DD1611F027BC10061DE58 /* LocationManager.swift */; };
+		EC8DD1651F027BDF0061DE58 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8DD1641F027BDF0061DE58 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		EC8DD14F1EFFD6EB0061DE58 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		EC8DD1591EFFE9A20061DE58 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		EC8DD15B1EFFF14E0061DE58 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
+		EC8DD1611F027BC10061DE58 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		EC8DD1641F027BDF0061DE58 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC8DD1651F027BDF0061DE58 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +61,7 @@
 			children = (
 				EC8DD12E1EFAF80A0061DE58 /* rtcGame */,
 				EC8DD12D1EFAF80A0061DE58 /* Products */,
+				EC8DD1631F027BDF0061DE58 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +82,7 @@
 				EC8DD1431EFAF8230061DE58 /* ThirdViewController.swift */,
 				EC8DD1451EFAF82C0061DE58 /* FourthViewController.swift */,
 				EC8DD1471EFAF8330061DE58 /* FifthViewController.swift */,
+				EC8DD1611F027BC10061DE58 /* LocationManager.swift */,
 				EC8DD14D1EFFD1870061DE58 /* CustomTableViewCell.xib */,
 				EC8DD14F1EFFD6EB0061DE58 /* CustomTableViewCell.swift */,
 				EC8DD15B1EFFF14E0061DE58 /* CustomCollectionViewCell.xib */,
@@ -86,6 +93,14 @@
 				EC8DD13D1EFAF80A0061DE58 /* Info.plist */,
 			);
 			path = rtcGame;
+			sourceTree = "<group>";
+		};
+		EC8DD1631F027BDF0061DE58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC8DD1641F027BDF0061DE58 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +186,7 @@
 				EC8DD14C1EFFC90A0061DE58 /* FirstViewController.swift in Sources */,
 				EC8DD1441EFAF8230061DE58 /* ThirdViewController.swift in Sources */,
 				EC8DD1461EFAF82C0061DE58 /* FourthViewController.swift in Sources */,
+				EC8DD1621F027BC10061DE58 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

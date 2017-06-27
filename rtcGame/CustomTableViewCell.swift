@@ -25,7 +25,9 @@ class CustomTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        theUserIconImage.layer.cornerRadius = 5
+        theUserIconImage.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
