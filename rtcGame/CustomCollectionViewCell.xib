@@ -12,17 +12,18 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="gPn-gM-tTg" customClass="CustomCollectionViewCell" customModule="rtcGame" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+            <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hjG-8c-aYE">
-                        <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hjG-8c-aYE">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zM8-iw-4tX">
-                        <rect key="frame" x="8" y="8" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zM8-iw-4tX">
+                        <rect key="frame" x="104" y="115" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -30,19 +31,15 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="hjG-8c-aYE" secondAttribute="bottom" id="2jD-Gh-D6D"/>
-                <constraint firstItem="hjG-8c-aYE" firstAttribute="top" secondItem="gPn-gM-tTg" secondAttribute="top" id="DG6-dD-KSl"/>
-                <constraint firstItem="zM8-iw-4tX" firstAttribute="top" secondItem="gPn-gM-tTg" secondAttribute="top" constant="8" id="ITq-1X-nhN"/>
-                <constraint firstItem="zM8-iw-4tX" firstAttribute="leading" secondItem="gPn-gM-tTg" secondAttribute="leading" constant="8" id="TYU-hd-bWG"/>
-                <constraint firstAttribute="trailing" secondItem="hjG-8c-aYE" secondAttribute="trailing" id="dUj-Hk-wAJ"/>
-                <constraint firstItem="hjG-8c-aYE" firstAttribute="leading" secondItem="gPn-gM-tTg" secondAttribute="leading" id="e8O-EU-ypK"/>
+                <constraint firstItem="zM8-iw-4tX" firstAttribute="centerX" secondItem="gPn-gM-tTg" secondAttribute="centerX" id="DHe-k0-IC4"/>
+                <constraint firstItem="zM8-iw-4tX" firstAttribute="centerY" secondItem="gPn-gM-tTg" secondAttribute="centerY" id="fZH-5Y-6CR"/>
             </constraints>
-            <size key="customSize" width="279" height="178"/>
+            <size key="customSize" width="348" height="214"/>
             <connections>
                 <outlet property="theImageView" destination="hjG-8c-aYE" id="w1A-Y5-r2m"/>
                 <outlet property="theLabel" destination="zM8-iw-4tX" id="m15-Bh-vYV"/>
             </connections>
-            <point key="canvasLocation" x="-152" y="97"/>
+            <point key="canvasLocation" x="-118" y="115"/>
         </collectionViewCell>
     </objects>
 </document>

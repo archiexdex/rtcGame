@@ -86,9 +86,15 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.theContentLabel.text = self.contentList[indexPath.row]
 
+        // Set icon circle
         cell.layoutIfNeeded()
         cell.theUserIconImage.layer.cornerRadius = cell.theUserIconImage.frame.height / 2
 
+        // Set image fit
+        cell.theImage.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        cell.contentMode = .scaleAspectFit
+//        cell.theImage.clipsToBounds = true
+        
         return cell
     }
     

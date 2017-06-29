@@ -26,7 +26,8 @@ class CustomTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        theUserIconImage.layer.cornerRadius = 5
+        // set icon circle
+//        theUserIconImage.layer.cornerRadius = 5
         theUserIconImage.clipsToBounds = true
     }
 

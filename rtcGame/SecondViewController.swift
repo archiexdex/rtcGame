@@ -49,11 +49,15 @@ extension SecondViewController: UICollectionViewDelegate, UICollectionViewDataSo
         cell.theImageView.image = UIImage(named: self.imgList[indexPath.row])
         cell.theLabel.text = self.list[indexPath.row]
         
+        // Set image fit
+        cell.theImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        cell.contentMode = .scaleAspectFit
+        
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(5, 10, 5, 10)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        return UIEdgeInsetsMake(5, 10, 5, 10)
+//    }
 }
 
