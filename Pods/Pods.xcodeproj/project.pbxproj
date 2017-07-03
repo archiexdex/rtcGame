@@ -1,0 +1,1095 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B09EA798B5393B5D7069045292ED1E2 /* Timeline.swift */; };
+		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AA9633ADE26E08728FDED146729949F1 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DBE4E40E67714215B90AF508C9C362 /* TaskDelegate.swift */; };
+		3E21F2069071B6CF2AA2623C6FF15789 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4112845EA4077107D1D36B110E0B4BC3 /* SwiftyJSON.swift */; };
+		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E8140CA374BD20F3D5FEEEC1E414B /* Request.swift */; };
+		5AA41E3CF98B635A48255A6785B4481A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D21FE045F5BCC42EEE4E81D5FC628C2 /* DispatchQueue+Alamofire.swift */; };
+		61CE0B1B651E62C09526544BE771B32D /* GoogleMaterialIconFont-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CC138944F246357A205DBEFED157FC20 /* GoogleMaterialIconFont-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0695E692CE6392818E632FECE20629A7 /* ServerTrustPolicy.swift */; };
+		73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		7AD2D1A97F5354EC69133DF1CE059A45 /* GoogleMaterialIconFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816304605C1B1573204FECD4C30D0FCD /* GoogleMaterialIconFont.swift */; };
+		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C301390C32216C70EE6F65CBD089C858 /* SessionDelegate.swift */; };
+		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179CFEC3F11CF23EFCC63697A714861B /* Result.swift */; };
+		82C48585B8C86AAFB720F47A09CAE9A0 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB1FC810ACCAE327987F921107F0D24 /* SwiftyJSON-dummy.m */; };
+		8CF03F8E6AC93866D3EAB4707EBD7C91 /* MaterialIcons-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D7424DA10E95D7575139FF477F3A78B /* MaterialIcons-Regular.ttf */; };
+		90B58449B8674BD47D79949DC23A9D16 /* GoogleMaterialIconFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 7057835CEF7D2BB7D450E4DC8C30BF46 /* GoogleMaterialIconFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99940D4E40D2934ABE34C3EDD592FBC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		9B68AEA7B57991ABFCC2BFDF6806A33C /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE26F1852C117FCEEEF7EED3B4BA4410 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79745CB61E7264A27DE9D908853F8671 /* AFError.swift */; };
+		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64E0A3DCABECDE236864CD954CF0C4F /* NetworkReachabilityManager.swift */; };
+		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E782FAF9306D3F3FC772223D17A2FA7 /* Alamofire-dummy.m */; };
+		AB58F35D199660745848461B6B59C044 /* GoogleMaterialIconFont.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F2FFAE1A69DE25A56D401FC4F6D7C3B9 /* GoogleMaterialIconFont.bundle */; };
+		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF9252C4FDCA16296ECAE807B85E2B1 /* SessionManager.swift */; };
+		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66D6AB90E88296AE4A9ADD48E4E9ED /* MultipartFormData.swift */; };
+		B6A00BA5E0FD80ECA31678485750B6A3 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366210B7E379A33B81684D50F3A079D8 /* Font.swift */; };
+		BBD5F59D13853658C3776817828A66CF /* Pods-rtcGame-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D599ED3652ACE5F4D8045C8DA89A82EA /* Pods-rtcGame-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025FA9336D12126FBEA812204226CC58 /* Validation.swift */; };
+		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9DFDBE4D1408E146F4EBD4C06A436F /* ParameterEncoding.swift */; };
+		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA404AB36B33FFBB24077F58EEDB4115 /* Response.swift */; };
+		D5AB020D96305120C7988AE93D4C4235 /* GoogleMaterialIconFont-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A31CA8FFB5EB9BB2664B4A74D60DF15B /* GoogleMaterialIconFont-dummy.m */; };
+		E02EAFE39CB8660C51C96B0B0DE92601 /* Pods-rtcGame-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB21CC986EA6C017F7257E7EB2A7CDE /* Pods-rtcGame-dummy.m */; };
+		E7FDF4B8CD40633E06D24C524F6E5739 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308DE305559DD2648F581FCA3D8CC42A /* Notifications.swift */; };
+		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F055BF8D0FDCB96C768E542F48D65C6 /* ResponseSerialization.swift */; };
+		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FB544B1634C3ACB0581CB8F09986B3 /* Alamofire.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C6176E972B054BA04A2C90A30CE35736 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88E9EC28B8B46C3631E6B242B50F4442;
+			remoteInfo = Alamofire;
+		};
+		D7FFB291BA3AF8210543BA1EED352377 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12AC33A36C1C1C3BEC4CB36CEF4E38CD;
+			remoteInfo = SwiftyJSON;
+		};
+		E8C4DD8DFD79B3A1268A6A9CD9BD0C4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD80CAE7012A299EDA61CB79FBE6611E;
+			remoteInfo = GoogleMaterialIconFont;
+		};
+		FA639085937E7C0FE0E15B7E3053A1C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 375CB3AF97C72705DBF1BDC3C98FE137;
+			remoteInfo = "GoogleMaterialIconFont-GoogleMaterialIconFont";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		025FA9336D12126FBEA812204226CC58 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		056F3A523BDADF63024DA0AB0796181B /* Pods-rtcGame-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-rtcGame-frameworks.sh"; sourceTree = "<group>"; };
+		0695E692CE6392818E632FECE20629A7 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		0B09EA798B5393B5D7069045292ED1E2 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		179CFEC3F11CF23EFCC63697A714861B /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		234337C117F3CA097AA5F20C0EEAEABA /* Pods-rtcGame-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-rtcGame-acknowledgements.plist"; sourceTree = "<group>"; };
+		24B10B5CA3B981E602B98AAC48C8EAA5 /* Pods-rtcGame.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-rtcGame.modulemap"; sourceTree = "<group>"; };
+		2C66D6AB90E88296AE4A9ADD48E4E9ED /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		2D21FE045F5BCC42EEE4E81D5FC628C2 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		2D7424DA10E95D7575139FF477F3A78B /* MaterialIcons-Regular.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "MaterialIcons-Regular.ttf"; path = "Pod/Assets/MaterialIcons-Regular.ttf"; sourceTree = "<group>"; };
+		308DE305559DD2648F581FCA3D8CC42A /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		3498D7CCEC598CA2243AFBA5D2D8F1FC /* GoogleMaterialIconFont.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaterialIconFont.xcconfig; sourceTree = "<group>"; };
+		366210B7E379A33B81684D50F3A079D8 /* Font.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Font.swift; path = Pod/Classes/Font.swift; sourceTree = "<group>"; };
+		3E782FAF9306D3F3FC772223D17A2FA7 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		4112845EA4077107D1D36B110E0B4BC3 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		4147499751F525B5D511075D4BF839E8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47FB544B1634C3ACB0581CB8F09986B3 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		508D0C54BF9C7A76AF37A130E4E9AE88 /* Pods_rtcGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_rtcGame.framework; path = "Pods-rtcGame.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		58E009ED918E8F90837F4577C42C792D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F9DFDBE4D1408E146F4EBD4C06A436F /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		627632C4C7E6EA9BD3F264A1DD0C1489 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6D38AB00A3AF7776B3008CB069966260 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F055BF8D0FDCB96C768E542F48D65C6 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		7057835CEF7D2BB7D450E4DC8C30BF46 /* GoogleMaterialIconFont.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GoogleMaterialIconFont.h; path = Pod/Classes/GoogleMaterialIconFont.h; sourceTree = "<group>"; };
+		718408613D436CE8134CC5701FBAB573 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
+		79745CB61E7264A27DE9D908853F8671 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		7BCEFA9FBB0C484DFFE003D00E50F07D /* Pods-rtcGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-rtcGame.release.xcconfig"; sourceTree = "<group>"; };
+		7EF9252C4FDCA16296ECAE807B85E2B1 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		816304605C1B1573204FECD4C30D0FCD /* GoogleMaterialIconFont.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GoogleMaterialIconFont.swift; path = Pod/Classes/GoogleMaterialIconFont.swift; sourceTree = "<group>"; };
+		8BEBC1CCE810CE3AD6E203B930F548FD /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		8FB21CC986EA6C017F7257E7EB2A7CDE /* Pods-rtcGame-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-rtcGame-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9824AC6735E41909072BE80BBFD99D13 /* Pods-rtcGame-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-rtcGame-resources.sh"; sourceTree = "<group>"; };
+		9828477C3A0E40EFAF2D57834564F48E /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		A139E097171F0373384EA402C1DFA333 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1EBC80A94812EE81DBBC1F6C8AAC8FD /* GoogleMaterialIconFont-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleMaterialIconFont-prefix.pch"; sourceTree = "<group>"; };
+		A31CA8FFB5EB9BB2664B4A74D60DF15B /* GoogleMaterialIconFont-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleMaterialIconFont-dummy.m"; sourceTree = "<group>"; };
+		A6DBE4E40E67714215B90AF508C9C362 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		AA404AB36B33FFBB24077F58EEDB4115 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		AA9633ADE26E08728FDED146729949F1 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		BA6406E4C48D21C77B90CF5B403EFFAA /* Pods-rtcGame-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-rtcGame-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BE5BB432395F66AA93CA11D48B207284 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		C301390C32216C70EE6F65CBD089C858 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		C6C020123837FC51A450D8A57519A614 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC138944F246357A205DBEFED157FC20 /* GoogleMaterialIconFont-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleMaterialIconFont-umbrella.h"; sourceTree = "<group>"; };
+		D599ED3652ACE5F4D8045C8DA89A82EA /* Pods-rtcGame-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-rtcGame-umbrella.h"; sourceTree = "<group>"; };
+		DEEE2218418CA891446E3880767E3B76 /* Pods-rtcGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-rtcGame.debug.xcconfig"; sourceTree = "<group>"; };
+		DFB4E38A883FC41F87D38AB6080883CD /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		E0FE42EF812784DFDB0A8E56A49212D1 /* ResourceBundle-GoogleMaterialIconFont-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-GoogleMaterialIconFont-Info.plist"; sourceTree = "<group>"; };
+		E1222384FF278C3386127967495E2010 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E64E0A3DCABECDE236864CD954CF0C4F /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		EDACDD9094025A0EF8B30DA26E851012 /* GoogleMaterialIconFont.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GoogleMaterialIconFont.modulemap; sourceTree = "<group>"; };
+		EE26F1852C117FCEEEF7EED3B4BA4410 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		EE8D41208412244CA5B9739D3D078D35 /* GoogleMaterialIconFont.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleMaterialIconFont.framework; path = GoogleMaterialIconFont.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2FFAE1A69DE25A56D401FC4F6D7C3B9 /* GoogleMaterialIconFont.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = GoogleMaterialIconFont.bundle; path = GoogleMaterialIconFont.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		F41E8140CA374BD20F3D5FEEEC1E414B /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		FCB1FC810ACCAE327987F921107F0D24 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F09FA1E9AA6E43F45D41F080F8A50CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99940D4E40D2934ABE34C3EDD592FBC5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99195E4207764744AEC07ECCBCD550EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE71AC04DFC992BB3386E0BCC031508 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7FDF4B8CD40633E06D24C524F6E5739 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB0C4C7445425F03B6AE5EA80EAD22BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AA41E3CF98B635A48255A6785B4481A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC54CEBC8FEDEF938B220EA6F72DFA25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09BA9D170A1E456D6A41F77D28CC014E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A2741E3422AC5AA467D9F93026C7811 /* Alamofire */,
+				E56940FB8056C730B8586403F81A46DC /* GoogleMaterialIconFont */,
+				EE715E01B67FA7547391C52DCC8F8731 /* SwiftyJSON */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		121E35A0F194BCFC503A57B243E7E0FE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				58E009ED918E8F90837F4577C42C792D /* Info.plist */,
+				BE5BB432395F66AA93CA11D48B207284 /* SwiftyJSON.modulemap */,
+				718408613D436CE8134CC5701FBAB573 /* SwiftyJSON.xcconfig */,
+				FCB1FC810ACCAE327987F921107F0D24 /* SwiftyJSON-dummy.m */,
+				8BEBC1CCE810CE3AD6E203B930F548FD /* SwiftyJSON-prefix.pch */,
+				EE26F1852C117FCEEEF7EED3B4BA4410 /* SwiftyJSON-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
+			sourceTree = "<group>";
+		};
+		571590A144BD119C6E1582ECF1A09269 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD3644FB84E5B2CF00B7E1D846F2B0B4 /* Pods-rtcGame */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7A2741E3422AC5AA467D9F93026C7811 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				79745CB61E7264A27DE9D908853F8671 /* AFError.swift */,
+				47FB544B1634C3ACB0581CB8F09986B3 /* Alamofire.swift */,
+				2D21FE045F5BCC42EEE4E81D5FC628C2 /* DispatchQueue+Alamofire.swift */,
+				2C66D6AB90E88296AE4A9ADD48E4E9ED /* MultipartFormData.swift */,
+				E64E0A3DCABECDE236864CD954CF0C4F /* NetworkReachabilityManager.swift */,
+				308DE305559DD2648F581FCA3D8CC42A /* Notifications.swift */,
+				5F9DFDBE4D1408E146F4EBD4C06A436F /* ParameterEncoding.swift */,
+				F41E8140CA374BD20F3D5FEEEC1E414B /* Request.swift */,
+				AA404AB36B33FFBB24077F58EEDB4115 /* Response.swift */,
+				6F055BF8D0FDCB96C768E542F48D65C6 /* ResponseSerialization.swift */,
+				179CFEC3F11CF23EFCC63697A714861B /* Result.swift */,
+				0695E692CE6392818E632FECE20629A7 /* ServerTrustPolicy.swift */,
+				C301390C32216C70EE6F65CBD089C858 /* SessionDelegate.swift */,
+				7EF9252C4FDCA16296ECAE807B85E2B1 /* SessionManager.swift */,
+				A6DBE4E40E67714215B90AF508C9C362 /* TaskDelegate.swift */,
+				0B09EA798B5393B5D7069045292ED1E2 /* Timeline.swift */,
+				025FA9336D12126FBEA812204226CC58 /* Validation.swift */,
+				E07A378E98F5EC156031A5A603012AB3 /* Support Files */,
+			);
+			name = Alamofire;
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				09BA9D170A1E456D6A41F77D28CC014E /* Pods */,
+				C417B825F3C8FC1C212EA6EE568D325E /* Products */,
+				571590A144BD119C6E1582ECF1A09269 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A07DB26ADDEB5F7D1FF0006DC92E8ED1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EDACDD9094025A0EF8B30DA26E851012 /* GoogleMaterialIconFont.modulemap */,
+				3498D7CCEC598CA2243AFBA5D2D8F1FC /* GoogleMaterialIconFont.xcconfig */,
+				A31CA8FFB5EB9BB2664B4A74D60DF15B /* GoogleMaterialIconFont-dummy.m */,
+				A1EBC80A94812EE81DBBC1F6C8AAC8FD /* GoogleMaterialIconFont-prefix.pch */,
+				CC138944F246357A205DBEFED157FC20 /* GoogleMaterialIconFont-umbrella.h */,
+				E1222384FF278C3386127967495E2010 /* Info.plist */,
+				E0FE42EF812784DFDB0A8E56A49212D1 /* ResourceBundle-GoogleMaterialIconFont-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GoogleMaterialIconFont";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3B7F13F72A36DBAA16270EA0E028101 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2D7424DA10E95D7575139FF477F3A78B /* MaterialIcons-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C417B825F3C8FC1C212EA6EE568D325E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A139E097171F0373384EA402C1DFA333 /* Alamofire.framework */,
+				F2FFAE1A69DE25A56D401FC4F6D7C3B9 /* GoogleMaterialIconFont.bundle */,
+				EE8D41208412244CA5B9739D3D078D35 /* GoogleMaterialIconFont.framework */,
+				508D0C54BF9C7A76AF37A130E4E9AE88 /* Pods_rtcGame.framework */,
+				6D38AB00A3AF7776B3008CB069966260 /* SwiftyJSON.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD3644FB84E5B2CF00B7E1D846F2B0B4 /* Pods-rtcGame */ = {
+			isa = PBXGroup;
+			children = (
+				C6C020123837FC51A450D8A57519A614 /* Info.plist */,
+				24B10B5CA3B981E602B98AAC48C8EAA5 /* Pods-rtcGame.modulemap */,
+				BA6406E4C48D21C77B90CF5B403EFFAA /* Pods-rtcGame-acknowledgements.markdown */,
+				234337C117F3CA097AA5F20C0EEAEABA /* Pods-rtcGame-acknowledgements.plist */,
+				8FB21CC986EA6C017F7257E7EB2A7CDE /* Pods-rtcGame-dummy.m */,
+				056F3A523BDADF63024DA0AB0796181B /* Pods-rtcGame-frameworks.sh */,
+				9824AC6735E41909072BE80BBFD99D13 /* Pods-rtcGame-resources.sh */,
+				D599ED3652ACE5F4D8045C8DA89A82EA /* Pods-rtcGame-umbrella.h */,
+				DEEE2218418CA891446E3880767E3B76 /* Pods-rtcGame.debug.xcconfig */,
+				7BCEFA9FBB0C484DFFE003D00E50F07D /* Pods-rtcGame.release.xcconfig */,
+			);
+			name = "Pods-rtcGame";
+			path = "Target Support Files/Pods-rtcGame";
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E07A378E98F5EC156031A5A603012AB3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9828477C3A0E40EFAF2D57834564F48E /* Alamofire.modulemap */,
+				DFB4E38A883FC41F87D38AB6080883CD /* Alamofire.xcconfig */,
+				3E782FAF9306D3F3FC772223D17A2FA7 /* Alamofire-dummy.m */,
+				627632C4C7E6EA9BD3F264A1DD0C1489 /* Alamofire-prefix.pch */,
+				AA9633ADE26E08728FDED146729949F1 /* Alamofire-umbrella.h */,
+				4147499751F525B5D511075D4BF839E8 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		E56940FB8056C730B8586403F81A46DC /* GoogleMaterialIconFont */ = {
+			isa = PBXGroup;
+			children = (
+				366210B7E379A33B81684D50F3A079D8 /* Font.swift */,
+				7057835CEF7D2BB7D450E4DC8C30BF46 /* GoogleMaterialIconFont.h */,
+				816304605C1B1573204FECD4C30D0FCD /* GoogleMaterialIconFont.swift */,
+				C3B7F13F72A36DBAA16270EA0E028101 /* Resources */,
+				A07DB26ADDEB5F7D1FF0006DC92E8ED1 /* Support Files */,
+			);
+			name = GoogleMaterialIconFont;
+			path = GoogleMaterialIconFont;
+			sourceTree = "<group>";
+		};
+		EE715E01B67FA7547391C52DCC8F8731 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				4112845EA4077107D1D36B110E0B4BC3 /* SwiftyJSON.swift */,
+				121E35A0F194BCFC503A57B243E7E0FE /* Support Files */,
+			);
+			name = SwiftyJSON;
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		77668B8E273158DF1D7A044CE1B30FFC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61CE0B1B651E62C09526544BE771B32D /* GoogleMaterialIconFont-umbrella.h in Headers */,
+				90B58449B8674BD47D79949DC23A9D16 /* GoogleMaterialIconFont.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FDB210A7AE29211E9E8FCF18F199266 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBD5F59D13853658C3776817828A66CF /* Pods-rtcGame-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4002B6E97835FDCCAA5963EFE09A3E0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E29DBF606C3693C553798D5A56BE1975 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B68AEA7B57991ABFCC2BFDF6806A33C /* SwiftyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		12AC33A36C1C1C3BEC4CB36CEF4E38CD /* SwiftyJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADAB776C68ED6A17239B1E9F31B9C917 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildPhases = (
+				C79023958F390BE5405012B0BA275466 /* Sources */,
+				4F09FA1E9AA6E43F45D41F080F8A50CB /* Frameworks */,
+				E29DBF606C3693C553798D5A56BE1975 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyJSON;
+			productName = SwiftyJSON;
+			productReference = 6D38AB00A3AF7776B3008CB069966260 /* SwiftyJSON.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		375CB3AF97C72705DBF1BDC3C98FE137 /* GoogleMaterialIconFont-GoogleMaterialIconFont */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A69EABA67E8790C2401D6B54C52951E /* Build configuration list for PBXNativeTarget "GoogleMaterialIconFont-GoogleMaterialIconFont" */;
+			buildPhases = (
+				92F3CDD2514A5B7EF7DF9CDABC4F7460 /* Sources */,
+				FC54CEBC8FEDEF938B220EA6F72DFA25 /* Frameworks */,
+				ADFCA44067E361B723D842BC854CF81B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GoogleMaterialIconFont-GoogleMaterialIconFont";
+			productName = "GoogleMaterialIconFont-GoogleMaterialIconFont";
+			productReference = F2FFAE1A69DE25A56D401FC4F6D7C3B9 /* GoogleMaterialIconFont.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildPhases = (
+				32B9974868188C4803318E36329C87FE /* Sources */,
+				99195E4207764744AEC07ECCBCD550EB /* Frameworks */,
+				B4002B6E97835FDCCAA5963EFE09A3E0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = A139E097171F0373384EA402C1DFA333 /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C679AC0D8105CC26105A50924FFC3AA8 /* Pods-rtcGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C500D2FD8A30E0AA65FD7C9F5023C570 /* Build configuration list for PBXNativeTarget "Pods-rtcGame" */;
+			buildPhases = (
+				C4F9541A749201B23817B20931149772 /* Sources */,
+				FB0C4C7445425F03B6AE5EA80EAD22BD /* Frameworks */,
+				8FDB210A7AE29211E9E8FCF18F199266 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				396ADB1D926F7215AB5C0D1AEF2A1413 /* PBXTargetDependency */,
+				D329888A043C72B2EFE029328625702A /* PBXTargetDependency */,
+				F48BC86DBC45D79462BE1792B23A6DB0 /* PBXTargetDependency */,
+			);
+			name = "Pods-rtcGame";
+			productName = "Pods-rtcGame";
+			productReference = 508D0C54BF9C7A76AF37A130E4E9AE88 /* Pods_rtcGame.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DD80CAE7012A299EDA61CB79FBE6611E /* GoogleMaterialIconFont */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17D70C47AAF3C7E95886A5F611285998 /* Build configuration list for PBXNativeTarget "GoogleMaterialIconFont" */;
+			buildPhases = (
+				2307F729A00AE13844750351F53C49E9 /* Sources */,
+				EDE71AC04DFC992BB3386E0BCC031508 /* Frameworks */,
+				AC610F29C628B222D470DBFA87FC0135 /* Resources */,
+				77668B8E273158DF1D7A044CE1B30FFC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBB46B46111B9BCF69B9EF97C2190DE5 /* PBXTargetDependency */,
+			);
+			name = GoogleMaterialIconFont;
+			productName = GoogleMaterialIconFont;
+			productReference = EE8D41208412244CA5B9739D3D078D35 /* GoogleMaterialIconFont.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = C417B825F3C8FC1C212EA6EE568D325E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */,
+				DD80CAE7012A299EDA61CB79FBE6611E /* GoogleMaterialIconFont */,
+				375CB3AF97C72705DBF1BDC3C98FE137 /* GoogleMaterialIconFont-GoogleMaterialIconFont */,
+				C679AC0D8105CC26105A50924FFC3AA8 /* Pods-rtcGame */,
+				12AC33A36C1C1C3BEC4CB36CEF4E38CD /* SwiftyJSON */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC610F29C628B222D470DBFA87FC0135 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB58F35D199660745848461B6B59C044 /* GoogleMaterialIconFont.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADFCA44067E361B723D842BC854CF81B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CF03F8E6AC93866D3EAB4707EBD7C91 /* MaterialIcons-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2307F729A00AE13844750351F53C49E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6A00BA5E0FD80ECA31678485750B6A3 /* Font.swift in Sources */,
+				D5AB020D96305120C7988AE93D4C4235 /* GoogleMaterialIconFont-dummy.m in Sources */,
+				7AD2D1A97F5354EC69133DF1CE059A45 /* GoogleMaterialIconFont.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32B9974868188C4803318E36329C87FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */,
+				A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */,
+				F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */,
+				61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */,
+				B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */,
+				A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */,
+				EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */,
+				BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */,
+				5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */,
+				CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */,
+				F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */,
+				7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */,
+				62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */,
+				7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */,
+				AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */,
+				3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */,
+				10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */,
+				BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92F3CDD2514A5B7EF7DF9CDABC4F7460 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4F9541A749201B23817B20931149772 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E02EAFE39CB8660C51C96B0B0DE92601 /* Pods-rtcGame-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C79023958F390BE5405012B0BA275466 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82C48585B8C86AAFB720F47A09CAE9A0 /* SwiftyJSON-dummy.m in Sources */,
+				3E21F2069071B6CF2AA2623C6FF15789 /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		396ADB1D926F7215AB5C0D1AEF2A1413 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = 88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */;
+			targetProxy = C6176E972B054BA04A2C90A30CE35736 /* PBXContainerItemProxy */;
+		};
+		CBB46B46111B9BCF69B9EF97C2190DE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GoogleMaterialIconFont-GoogleMaterialIconFont";
+			target = 375CB3AF97C72705DBF1BDC3C98FE137 /* GoogleMaterialIconFont-GoogleMaterialIconFont */;
+			targetProxy = FA639085937E7C0FE0E15B7E3053A1C7 /* PBXContainerItemProxy */;
+		};
+		D329888A043C72B2EFE029328625702A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleMaterialIconFont;
+			target = DD80CAE7012A299EDA61CB79FBE6611E /* GoogleMaterialIconFont */;
+			targetProxy = E8C4DD8DFD79B3A1268A6A9CD9BD0C4D /* PBXContainerItemProxy */;
+		};
+		F48BC86DBC45D79462BE1792B23A6DB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			target = 12AC33A36C1C1C3BEC4CB36CEF4E38CD /* SwiftyJSON */;
+			targetProxy = D7FFB291BA3AF8210543BA1EED352377 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0A96F9C9EEA0406C3D2E26D73CE8512E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3498D7CCEC598CA2243AFBA5D2D8F1FC /* GoogleMaterialIconFont.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/GoogleMaterialIconFont";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/GoogleMaterialIconFont/ResourceBundle-GoogleMaterialIconFont-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = GoogleMaterialIconFont;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		40D88FFA5D1F574B4780210CCD62F526 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3498D7CCEC598CA2243AFBA5D2D8F1FC /* GoogleMaterialIconFont.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GoogleMaterialIconFont/GoogleMaterialIconFont-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GoogleMaterialIconFont/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GoogleMaterialIconFont/GoogleMaterialIconFont.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = GoogleMaterialIconFont;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		643C76AA582046977B7877822ED7A258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		7D072D0D174F12EAACC1862DA756E67A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFB4E38A883FC41F87D38AB6080883CD /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B04F3894AE4859AC4C44E654FDF3403C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 718408613D436CE8134CC5701FBAB573 /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C03B8870130C98D1B02B59D003687524 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C2372BAFDADC9D3A3027AB0045BC1874 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3498D7CCEC598CA2243AFBA5D2D8F1FC /* GoogleMaterialIconFont.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/GoogleMaterialIconFont";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/GoogleMaterialIconFont/ResourceBundle-GoogleMaterialIconFont-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = GoogleMaterialIconFont;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		C9660A42FEDD040185578ADA021EC8E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFB4E38A883FC41F87D38AB6080883CD /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CCC2E7FE96E338E6327EB90C0A848EA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BCEFA9FBB0C484DFFE003D00E50F07D /* Pods-rtcGame.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-rtcGame/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-rtcGame/Pods-rtcGame.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_rtcGame;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EE2A04610971FDC8151DF5539E3F2E86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEEE2218418CA891446E3880767E3B76 /* Pods-rtcGame.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-rtcGame/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-rtcGame/Pods-rtcGame.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_rtcGame;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F01A92CFBA7854BDC60F5A9E49A713A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 718408613D436CE8134CC5701FBAB573 /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FB6435F269E05064B6BA35D3FD42A194 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3498D7CCEC598CA2243AFBA5D2D8F1FC /* GoogleMaterialIconFont.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GoogleMaterialIconFont/GoogleMaterialIconFont-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GoogleMaterialIconFont/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GoogleMaterialIconFont/GoogleMaterialIconFont.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = GoogleMaterialIconFont;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A69EABA67E8790C2401D6B54C52951E /* Build configuration list for PBXNativeTarget "GoogleMaterialIconFont-GoogleMaterialIconFont" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2372BAFDADC9D3A3027AB0045BC1874 /* Debug */,
+				0A96F9C9EEA0406C3D2E26D73CE8512E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17D70C47AAF3C7E95886A5F611285998 /* Build configuration list for PBXNativeTarget "GoogleMaterialIconFont" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40D88FFA5D1F574B4780210CCD62F526 /* Debug */,
+				FB6435F269E05064B6BA35D3FD42A194 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				643C76AA582046977B7877822ED7A258 /* Debug */,
+				C03B8870130C98D1B02B59D003687524 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9660A42FEDD040185578ADA021EC8E0 /* Debug */,
+				7D072D0D174F12EAACC1862DA756E67A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADAB776C68ED6A17239B1E9F31B9C917 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F01A92CFBA7854BDC60F5A9E49A713A5 /* Debug */,
+				B04F3894AE4859AC4C44E654FDF3403C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C500D2FD8A30E0AA65FD7C9F5023C570 /* Build configuration list for PBXNativeTarget "Pods-rtcGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE2A04610971FDC8151DF5539E3F2E86 /* Debug */,
+				CCC2E7FE96E338E6327EB90C0A848EA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

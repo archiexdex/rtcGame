@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="blD-jk-kDO" id="eEU-Tv-Aek">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="479.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="479"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dmf-da-vPf">
@@ -44,10 +44,6 @@
                         <rect key="frame" x="0.0" y="66" width="320" height="280"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KPS-YI-k4Q">
-                        <rect key="frame" x="8" y="354" width="30" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4 hours ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45O-M9-W1W">
                         <rect key="frame" x="245" y="354" width="68" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -69,12 +65,20 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Di1-yg-P9z">
+                        <rect key="frame" x="8" y="354" width="30" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <gestureRecognizers/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </tableViewCellContentView>
             <connections>
                 <outlet property="theContentLabel" destination="gnq-i9-nU8" id="fgA-ql-Sv4"/>
                 <outlet property="theImage" destination="fMb-Lh-Qec" id="mMD-Yp-Oxm"/>
-                <outlet property="theLikeImage" destination="KPS-YI-k4Q" id="MPC-KW-3Vz"/>
+                <outlet property="theLikeImage" destination="Di1-yg-P9z" id="uV7-HG-8gw"/>
                 <outlet property="theLikeLabel" destination="9kh-D6-gE1" id="kR3-gP-TQG"/>
                 <outlet property="theLocationLabel" destination="fON-3S-Bor" id="BVp-iC-vwc"/>
                 <outlet property="theTimeLabel" destination="45O-M9-W1W" id="K7N-zE-EKJ"/>

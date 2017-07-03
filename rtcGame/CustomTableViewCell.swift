@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMaterialIconFont
 
 class CustomTableViewCell: UITableViewCell {
 
@@ -17,7 +18,7 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet var theLocationLabel: UILabel!
     
     @IBOutlet var theImage: UIImageView!
-    @IBOutlet var theLikeImage: UIImageView!
+    @IBOutlet var theLikeImage: UILabel!
     @IBOutlet var theLikeLabel: UILabel!
     @IBOutlet var theTimeLabel: UILabel!
     @IBOutlet var theContentLabel: UILabel!
@@ -29,6 +30,16 @@ class CustomTableViewCell: UITableViewCell {
         // set icon circle
 //        theUserIconImage.layer.cornerRadius = 5
         theUserIconImage.clipsToBounds = true
+        
+        // Set like icon
+        theLikeImage.text = String.materialIcon(font: .ThumbUp)
+        theLikeImage.font = UIFont.materialIconOfSize(size: 24)
+        theLikeImage.textColor = .black
+        theLikeImage.isUserInteractionEnabled = true
+        
+        let like_tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.likeAction(_:)) )
+        theImage.addGestureRecognizer(like_tapGesture)
+        theLikeImage.addGestureRecognizer(like_tapGesture)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -36,5 +47,13 @@ class CustomTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    func likeAction(_ gestureRecognizer: UITapGestureRecognizer) {
+        switch theLikeImage.textColor {
+        case UIColor.black:
+            theLikeImage.textColor = .blue
+        default:
+            theLikeImage.textColor = .black
+        }
+    }
 }

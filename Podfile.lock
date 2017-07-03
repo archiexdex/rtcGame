@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (4.4.0)
+  - GoogleMaterialIconFont (0.5.0)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4)
+  - GoogleMaterialIconFont
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  GoogleMaterialIconFont: 10f52140f07f41d14146e80a773144fa452e5b5d
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: 86430b8442abd1ae86fc64666ee8f19a8ad54f7f
+
+COCOAPODS: 1.2.1

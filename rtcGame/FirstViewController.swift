@@ -82,6 +82,7 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
         cell.theLocationLabel.text = self.locationList[indexPath.row]
         cell.theImage.image = UIImage(named: self.imgList[indexPath.row])
         cell.theLikeLabel.text = self.like
+        
         cell.theTimeLabel.text = self.time
         
         cell.theContentLabel.text = self.contentList[indexPath.row]
@@ -95,9 +96,15 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
         cell.contentMode = .scaleAspectFit
 //        cell.theImage.clipsToBounds = true
         
+        
+        let like_tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.likeAction(_:)) )
+        cell.theImage.addGestureRecognizer(like_tapGesture)
+        
         return cell
     }
     
-    //Optional
+    func likeAction(_ gestureRecognizer: UITapGestureRecognizer) {
+        print("##")
+    }
     
 }
