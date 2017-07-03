@@ -28,7 +28,7 @@ class FirstViewController: UIViewController {
     var time = "1 hour ago"
     var like = "10 likes"
     var contentList = ["Hello\nworld\nI am here\n@W@", "Swift\nhaha\nlala", "UITableView\nis\ngarbage"]
-    var imgList = ["kanahara", "snoopy", "lalabare"]
+    var imgList = ["aaa", "snoopy", "lalabare"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
