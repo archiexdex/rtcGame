@@ -9,9 +9,11 @@
 import UIKit
 import GoogleMaterialIconFont
 
-class CustomTableViewCell: UITableViewCell {
+protocol CustomTableViewCellDelegate {
+    func didClickContent()
+}
 
-    
+class CustomTableViewCell: UITableViewCell {
     
     @IBOutlet var theUserIconImage: UIImageView!
     @IBOutlet var theUserIDLabel: UILabel!
@@ -23,6 +25,7 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet var theTimeLabel: UILabel!
     @IBOutlet var theContentLabel: UILabel!
     
+    var delegate : CustomTableViewCellDelegate!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,14 +35,11 @@ class CustomTableViewCell: UITableViewCell {
         theUserIconImage.clipsToBounds = true
         
         // Set like icon
-        theLikeImage.text = String.materialIcon(font: .ThumbUp)
-        theLikeImage.font = UIFont.materialIconOfSize(size: 24)
-        theLikeImage.textColor = .black
-        theLikeImage.isUserInteractionEnabled = true
+        likeImageSetting()
         
-        let like_tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.likeAction(_:)) )
-        theImage.addGestureRecognizer(like_tapGesture)
-        theLikeImage.addGestureRecognizer(like_tapGesture)
+        // Set Content Label
+        contentLabelSetting()
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -48,6 +48,27 @@ class CustomTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    // MARK: - Function
+    func likeImageSetting() {
+        theLikeImage.text = String.materialIcon(font: .ThumbUp)
+        theLikeImage.font = UIFont.materialIconOfSize(size: 24)
+        theLikeImage.textColor = .black
+        theLikeImage.isUserInteractionEnabled = true
+        
+        let like_tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.likeAction(_:)) )
+        theLikeImage.addGestureRecognizer(like_tapGesture)
+    }
+    
+    
+    func contentLabelSetting() {
+        
+        theContentLabel.isUserInteractionEnabled = true
+        theContentLabel.numberOfLines = 3
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.contentAction(_:)) )
+        theContentLabel.addGestureRecognizer(tap)
+    }
+    
+    // MARK: - Handler
     func likeAction(_ gestureRecognizer: UITapGestureRecognizer) {
         switch theLikeImage.textColor {
         case UIColor.black:
@@ -56,4 +77,9 @@ class CustomTableViewCell: UITableViewCell {
             theLikeImage.textColor = .black
         }
     }
+    
+    func contentAction(_ gestureRecognizer: UITapGestureRecognizer) {
+        self.delegate.didClickContent()
+    }
+    
 }

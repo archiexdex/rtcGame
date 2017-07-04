@@ -22,7 +22,7 @@ class SecondViewController: UIViewController {
         
         //scrollViewSetting()
         collectionViewSetting()
-        print("\(view.frame.size.width) \(view.frame.size.height)")
+//        print("\(view.frame.size.width) \(view.frame.size.height)")
     }
 
     override func didReceiveMemoryWarning() {

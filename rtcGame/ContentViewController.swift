@@ -1,19 +1,23 @@
 //
-//  FifthViewController.swift
+//  ContentViewController.swift
 //  rtcGame
 //
-//  Created by HsinChih Yang on 22/06/2017.
+//  Created by HsinChih Yang on 04/07/2017.
 //  Copyright © 2017 Archie. All rights reserved.
 //
 
 import UIKit
 
-class FifthViewController: UIViewController {
+class ContentViewController: UIViewController {
 
+    var content : String = ""
+    
+    @IBOutlet var theTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        theTextView.text = content
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,5 +35,8 @@ class FifthViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func backAction(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 
 }

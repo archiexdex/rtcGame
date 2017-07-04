@@ -27,7 +27,9 @@ class FirstViewController: UIViewController {
     var locationList = ["taiwan", "taipei", "hsinchu"]
     var time = "1 hour ago"
     var like = "10 likes"
-    var contentList = ["Hello\nworld\nI am here\n@W@", "Swift\nhaha\nlala", "UITableView\nis\ngarbage"]
+    var contentList = ["Hello~ my name is XDEX. I am 22 years old. Snoopy, lalabare, kanahara are my best favorate thing.",  
+                       "22Swift\n haha\n  @W@\n %%~~",
+                       "UITableView\nis\ngarbage"]
     var imgList = ["aaa", "snoopy", "lalabare"]
     
     override func viewDidLoad() {
@@ -47,13 +49,12 @@ class FirstViewController: UIViewController {
         myTableView.delegate = self
         myTableView.dataSource = self
         myTableView.separatorStyle = .none
-        myTableView.allowsSelection = false
+        myTableView.allowsSelection = true
         
         // Custom TableView Cell
         let nib = UINib(nibName: "CustomTableViewCell", bundle: nil)
         
         myTableView.register(nib, forCellReuseIdentifier: "Cell")
-        
     }
     /*
     // MARK: - Navigation
@@ -68,15 +69,19 @@ class FirstViewController: UIViewController {
 }
 
 
-extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
+extension FirstViewController: UITableViewDelegate, UITableViewDataSource, CustomTableViewCellDelegate {
+    
     
     //Require
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return self.contentList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
+        
+        cell.delegate = self
+        
         cell.theUserIconImage.image = UIImage(named: self.imgList[indexPath.row])
         cell.theUserIDLabel.text = self.usrName[indexPath.row]
         cell.theLocationLabel.text = self.locationList[indexPath.row]
@@ -96,15 +101,48 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
         cell.contentMode = .scaleAspectFit
 //        cell.theImage.clipsToBounds = true
         
-        
-        let like_tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.likeAction(_:)) )
-        cell.theImage.addGestureRecognizer(like_tapGesture)
-        
         return cell
     }
     
-    func likeAction(_ gestureRecognizer: UITapGestureRecognizer) {
-        print("##")
+    func didClickContent() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ContentViewController") as! ContentViewController
+        guard let row : Int = self.myTableView.indexPathForSelectedRow?.row else {
+            return
+        }
+        
+        vc.content = self.contentList[row]
+        present(vc, animated: true, completion: nil)
     }
     
+    func addReadMoreLabel(label : UILabel) {
+        
+        
+//        if (lengthForString >= 30)
+//        {
+//            NSInteger lengthForVisibleString = [self fitString:label.text intoLabel:label];
+//            NSMutableString *mutableString = [[NSMutableString alloc] initWithString:label.text];
+//            NSString *trimmedString = [mutableString stringByReplacingCharactersInRange:NSMakeRange(lengthForVisibleString, (label.text.length - lengthForVisibleString)) withString:@""];
+//            NSInteger readMoreLength = readMoreText.length;
+//            NSString *trimmedForReadMore = [trimmedString stringByReplacingCharactersInRange:NSMakeRange((trimmedString.length - readMoreLength), readMoreLength) withString:@""];
+//            NSMutableAttributedString *answerAttributed = [[NSMutableAttributedString alloc] initWithString:trimmedForReadMore attributes:@{
+//            NSFontAttributeName : label.font
+//            }];
+//            
+//            NSMutableAttributedString *readMoreAttributed = [[NSMutableAttributedString alloc] initWithString:readMoreText attributes:@{
+//            NSFontAttributeName : Font(TWRegular, 12.),
+//            NSForegroundColorAttributeName : White
+//        }];
+//        
+//        [answerAttributed appendAttributedString:readMoreAttributed];
+//        label.attributedText = answerAttributed;
+//        
+//        UITagTapGestureRecognizer *readMoreGesture = [[UITagTapGestureRecognizer alloc] initWithTarget:self action:@selector(readMoreDidClickedGesture:)];
+//        readMoreGesture.tag = 1;
+//        readMoreGesture.numberOfTapsRequired = 1;
+//        [label addGestureRecognizer:readMoreGesture];
+//        
+//        
+//        }
+    }
+
 }
