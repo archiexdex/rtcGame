@@ -22,6 +22,7 @@ class FirstViewController: UIViewController {
 
     //MARK: - Variable
     @IBOutlet var myTableView: UITableView!
+    var refreshControl = UIRefreshControl()
     
     var usrName = ["A", "B", "C"]
     var locationList = ["taiwan", "taipei", "hsinchu"]
@@ -36,7 +37,10 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
 
         tableViewSetting()
-        
+        refreshControl.addTarget(self, action: #selector(self.refresh), for: .valueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: ">w<")
+        myTableView.addSubview(refreshControl)
+        refresh()
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,16 +60,15 @@ class FirstViewController: UIViewController {
         
         myTableView.register(nib, forCellReuseIdentifier: "Cell")
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func refresh() {
+        
+        print(">> refreshing...")
+        usrName = ["Q", "W", "E"]
+        myTableView.reloadData()
+        refreshControl.endRefreshing()
     }
-    */
-
+    
 }
 
 
