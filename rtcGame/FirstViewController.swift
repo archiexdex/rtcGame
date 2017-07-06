@@ -114,38 +114,8 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource, Custo
         }
         
         vc.content = self.contentList[row]
+        vc.modalTransitionStyle = .crossDissolve
         present(vc, animated: true, completion: nil)
-    }
-    
-    func addReadMoreLabel(label : UILabel) {
-        
-        
-//        if (lengthForString >= 30)
-//        {
-//            NSInteger lengthForVisibleString = [self fitString:label.text intoLabel:label];
-//            NSMutableString *mutableString = [[NSMutableString alloc] initWithString:label.text];
-//            NSString *trimmedString = [mutableString stringByReplacingCharactersInRange:NSMakeRange(lengthForVisibleString, (label.text.length - lengthForVisibleString)) withString:@""];
-//            NSInteger readMoreLength = readMoreText.length;
-//            NSString *trimmedForReadMore = [trimmedString stringByReplacingCharactersInRange:NSMakeRange((trimmedString.length - readMoreLength), readMoreLength) withString:@""];
-//            NSMutableAttributedString *answerAttributed = [[NSMutableAttributedString alloc] initWithString:trimmedForReadMore attributes:@{
-//            NSFontAttributeName : label.font
-//            }];
-//            
-//            NSMutableAttributedString *readMoreAttributed = [[NSMutableAttributedString alloc] initWithString:readMoreText attributes:@{
-//            NSFontAttributeName : Font(TWRegular, 12.),
-//            NSForegroundColorAttributeName : White
-//        }];
-//        
-//        [answerAttributed appendAttributedString:readMoreAttributed];
-//        label.attributedText = answerAttributed;
-//        
-//        UITagTapGestureRecognizer *readMoreGesture = [[UITagTapGestureRecognizer alloc] initWithTarget:self action:@selector(readMoreDidClickedGesture:)];
-//        readMoreGesture.tag = 1;
-//        readMoreGesture.numberOfTapsRequired = 1;
-//        [label addGestureRecognizer:readMoreGesture];
-//        
-//        
-//        }
     }
 
 }
