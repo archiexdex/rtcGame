@@ -9,11 +9,26 @@
 import UIKit
 
 class ThirdViewController: UIViewController {
+    
+    
+    @IBOutlet var thePetImage: UIImageView!
+    @IBOutlet var theUserImage: UIImageView!
+    @IBOutlet var thePetName: UILabel!
+    @IBOutlet var thePetType: UILabel!
+    @IBOutlet var thePetGender: UILabel!
+    @IBOutlet var theDogTag: UIButton!
+    @IBOutlet var theCatTag: UIButton!
+    @IBOutlet var theBirdTag: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        theUserImage.clipsToBounds = true
+        theUserImage.layoutIfNeeded()
+        theUserImage.layer.cornerRadius = theUserImage.frame.height / 2
+        theUserImage.image = UIImage(named: "snoopy")
+        thePetImage.image = UIImage(named: "kanahara")
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +37,14 @@ class ThirdViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func logoutAction(_ sender: Any) {
     }
-    */
+    
+    @IBAction func theDogTagAction(_ sender: Any) {
+        
+        theDogTag.alpha = (theDogTag.alpha == 0.5) ? 1 : 0.5
+        theDogTag.back
+    }
+    
 
 }

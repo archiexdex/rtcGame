@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9pv-A4-QxB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -181,13 +181,169 @@
                     <view key="view" contentMode="scaleToFill" id="tHu-ZN-o5x">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="48W-8r-EDr">
+                                <rect key="frame" x="0.0" y="20" width="320" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="JjV-Pv-epM"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="User Info" id="ufs-rO-zou">
+                                        <barButtonItem key="rightBarButtonItem" title="log out" id="BIl-8K-UhP">
+                                            <connections>
+                                                <action selector="logoutAction:" destination="R5h-3F-e4e" id="gcI-yF-3dm"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F6m-BC-hjQ">
+                                <rect key="frame" x="0.0" y="73" width="320" height="196"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Nh-41-f8r">
+                                <rect key="frame" x="16" y="126" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="XX@XX.XX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePz-So-FoQ">
+                                <rect key="frame" x="124" y="166" width="87" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6zl-ce-soY">
+                                <rect key="frame" x="0.0" y="269" width="320" height="250"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDx-Ss-IQj">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tag : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nbe-VI-THf">
+                                                <rect key="frame" x="8" y="0.0" width="68" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTj-ju-A9y">
+                                                <rect key="frame" x="80" y="10" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Dog"/>
+                                                <connections>
+                                                    <action selector="theDogTagAction:" destination="R5h-3F-e4e" eventType="touchUpInside" id="cdP-eA-hge"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBn-t9-qMo">
+                                                <rect key="frame" x="145" y="10" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Cat"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqh-F5-HfH">
+                                                <rect key="frame" x="212" y="10" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Bird"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="XAt-ke-6if"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O32-8V-J9D">
+                                        <rect key="frame" x="0.0" y="50" width="320" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pet Name : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95H-Pg-W5c">
+                                                <rect key="frame" x="8" y="15" width="89" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="kkw-gR-TmO"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Il5-t1-LSs">
+                                        <rect key="frame" x="0.0" y="100" width="320" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pet Type : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNE-81-Z2P">
+                                                <rect key="frame" x="8" y="15" width="81" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="aBT-KJ-gga"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V5n-dj-WD7">
+                                        <rect key="frame" x="0.0" y="150" width="320" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pet Gender : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXK-ic-WZH">
+                                                <rect key="frame" x="8" y="0.0" width="100" height="60"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="QpK-7r-MNC"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gW3-Ou-bgN">
+                                        <rect key="frame" x="0.0" y="200" width="320" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connect Account : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRv-l2-pCK">
+                                                <rect key="frame" x="8" y="0.0" width="147" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="l1d-gU-Ke7"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="F6m-BC-hjQ" firstAttribute="leading" secondItem="tHu-ZN-o5x" secondAttribute="leading" id="82C-Sb-AfA"/>
+                            <constraint firstAttribute="trailing" secondItem="6zl-ce-soY" secondAttribute="trailing" id="9lK-vt-Jbe"/>
+                            <constraint firstItem="F6m-BC-hjQ" firstAttribute="top" secondItem="48W-8r-EDr" secondAttribute="bottom" id="APw-9z-HLy"/>
+                            <constraint firstItem="6zl-ce-soY" firstAttribute="top" secondItem="F6m-BC-hjQ" secondAttribute="bottom" id="Ek2-6s-0p1"/>
+                            <constraint firstItem="6zl-ce-soY" firstAttribute="leading" secondItem="tHu-ZN-o5x" secondAttribute="leading" id="Mwa-9v-LQb"/>
+                            <constraint firstItem="48W-8r-EDr" firstAttribute="leading" secondItem="tHu-ZN-o5x" secondAttribute="leading" id="PPL-r6-XdZ"/>
+                            <constraint firstAttribute="trailing" secondItem="F6m-BC-hjQ" secondAttribute="trailing" id="YqV-ad-eyG"/>
+                            <constraint firstItem="48W-8r-EDr" firstAttribute="top" secondItem="9qH-pn-u5H" secondAttribute="bottom" id="g56-um-LMu"/>
+                            <constraint firstAttribute="trailing" secondItem="48W-8r-EDr" secondAttribute="trailing" id="sX7-vh-cCK"/>
+                            <constraint firstItem="xAJ-De-9Fr" firstAttribute="top" secondItem="6zl-ce-soY" secondAttribute="bottom" id="xWI-QC-qjo"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Third" id="Bbg-B1-4B0"/>
+                    <connections>
+                        <outlet property="theBirdTag" destination="uqh-F5-HfH" id="0Ax-7h-DIg"/>
+                        <outlet property="theCatTag" destination="gBn-t9-qMo" id="lff-Cc-6nU"/>
+                        <outlet property="theDogTag" destination="cTj-ju-A9y" id="OsV-x4-d0p"/>
+                        <outlet property="thePetGender" destination="pXK-ic-WZH" id="ka0-ME-wm0"/>
+                        <outlet property="thePetImage" destination="F6m-BC-hjQ" id="OJ8-xs-Don"/>
+                        <outlet property="thePetName" destination="95H-Pg-W5c" id="2fL-Mp-dWp"/>
+                        <outlet property="thePetType" destination="fNE-81-Z2P" id="uvl-XS-95I"/>
+                        <outlet property="theUserImage" destination="7Nh-41-f8r" id="LVQ-V2-BTK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fhE-bc-tCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="782" y="783"/>
+            <point key="canvasLocation" x="781.875" y="782.74647887323943"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
