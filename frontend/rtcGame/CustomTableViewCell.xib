@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="blD-jk-kDO" id="eEU-Tv-Aek">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="479"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="479.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dmf-da-vPf">
@@ -81,6 +81,7 @@
                 <outlet property="theLikeImage" destination="Di1-yg-P9z" id="uV7-HG-8gw"/>
                 <outlet property="theLikeLabel" destination="9kh-D6-gE1" id="kR3-gP-TQG"/>
                 <outlet property="theLocationLabel" destination="fON-3S-Bor" id="BVp-iC-vwc"/>
+                <outlet property="theOptionView" destination="bPI-Eu-LQM" id="Ga2-CY-Wy8"/>
                 <outlet property="theTimeLabel" destination="45O-M9-W1W" id="K7N-zE-EKJ"/>
                 <outlet property="theUserIDLabel" destination="HFu-F8-Vgx" id="spE-Oe-fxp"/>
                 <outlet property="theUserIconImage" destination="dmf-da-vPf" id="Pbd-3z-uHI"/>

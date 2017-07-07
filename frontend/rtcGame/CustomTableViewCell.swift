@@ -11,6 +11,7 @@ import GoogleMaterialIconFont
 
 protocol CustomTableViewCellDelegate {
     func didClickContent()
+    func didClickOption()
 }
 
 class CustomTableViewCell: UITableViewCell {
@@ -19,6 +20,7 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet var theUserIDLabel: UILabel!
     @IBOutlet var theLocationLabel: UILabel!
     
+    @IBOutlet var theOptionView: UIImageView!
     @IBOutlet var theImage: UIImageView!
     @IBOutlet var theLikeImage: UILabel!
     @IBOutlet var theLikeLabel: UILabel!
@@ -40,6 +42,8 @@ class CustomTableViewCell: UITableViewCell {
         // Set Content Label
         contentLabelSetting()
         
+        // Set Option View
+        optionViewSetting()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -68,6 +72,13 @@ class CustomTableViewCell: UITableViewCell {
         theContentLabel.addGestureRecognizer(tap)
     }
     
+    func optionViewSetting() {
+        
+        theOptionView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.optionAction(_:) ))
+        theOptionView.addGestureRecognizer(tap)
+    }
+    
     // MARK: - Handler
     func likeAction(_ gestureRecognizer: UITapGestureRecognizer) {
         switch theLikeImage.textColor {
@@ -80,6 +91,10 @@ class CustomTableViewCell: UITableViewCell {
     
     func contentAction(_ gestureRecognizer: UITapGestureRecognizer) {
         self.delegate.didClickContent()
+    }
+    
+    func optionAction(_ gestureRecognizer: UITapGestureRecognizer) {
+        self.delegate.didClickOption()
     }
     
 }

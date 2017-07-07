@@ -118,6 +118,16 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource, Custo
         present(vc, animated: true, completion: nil)
     }
     
-    
+    func didClickOption() {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let sendMessageAction = UIAlertAction(title: "Send Message", style: .destructive, handler: nil)
+        alertController.addAction(sendMessageAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
 
 }
