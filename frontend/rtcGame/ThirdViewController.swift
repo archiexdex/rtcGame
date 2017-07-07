@@ -29,6 +29,9 @@ class ThirdViewController: UIViewController {
         theUserImage.image = UIImage(named: "snoopy")
         thePetImage.image = UIImage(named: "kanahara")
         
+        btnSetting(btn: theDogTag)
+        btnSetting(btn: theCatTag)
+        btnSetting(btn: theBirdTag)
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,15 +39,42 @@ class ThirdViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: - function
+    func btnSetting(btn: UIButton) {
+        btn.alpha = 0.5
+        btn.layer.borderWidth = 1
+        btn.layer.cornerRadius = 5
+        btn.layer.borderColor = UIColor.purple.cgColor
+        btn.tintColor = .purple
+        
+    }
 
     @IBAction func logoutAction(_ sender: Any) {
     }
     
     @IBAction func theDogTagAction(_ sender: Any) {
-        
-        theDogTag.alpha = (theDogTag.alpha == 0.5) ? 1 : 0.5
-        theDogTag.back
+        changeButtonAlpha(btn: theDogTag)
+    }
+    @IBAction func theCatTagAction(_ sender: Any) {
+        changeButtonAlpha(btn: theCatTag)
+    }
+    @IBAction func theBirdTagAction(_ sender: Any) {
+        changeButtonAlpha(btn: theBirdTag)
     }
     
-
+    func changeButtonAlpha(btn : UIButton) {
+        
+        if btn.alpha == 0.5 {
+            btn.alpha = 1
+            btn.tintColor = .white
+            btn.backgroundColor = .purple
+            
+        }
+        else {
+            btn.alpha = 0.5
+            btn.tintColor = .purple
+            btn.backgroundColor = .white
+        }
+        
+    }
 }
