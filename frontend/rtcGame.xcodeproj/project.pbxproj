@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02E6EB4D2BF7A3D898C8A499 /* Pods_rtcGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F452873875136F6E0CC25386 /* Pods_rtcGame.framework */; };
+		EC7F0FB21F115FA800F8AAAE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7F0FB11F115FA800F8AAAE /* LoginViewController.swift */; };
 		EC8DD1301EFAF80A0061DE58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8DD12F1EFAF80A0061DE58 /* AppDelegate.swift */; };
 		EC8DD1341EFAF80A0061DE58 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8DD1331EFAF80A0061DE58 /* SecondViewController.swift */; };
 		EC8DD1371EFAF80A0061DE58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC8DD1351EFAF80A0061DE58 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		7B9558E41749BE72DDEB64BC /* Pods-rtcGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rtcGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rtcGame/Pods-rtcGame.debug.xcconfig"; sourceTree = "<group>"; };
 		C741331844B1CE5DD0081D10 /* Pods-rtcGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rtcGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-rtcGame/Pods-rtcGame.release.xcconfig"; sourceTree = "<group>"; };
+		EC7F0FB11F115FA800F8AAAE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EC8DD12C1EFAF80A0061DE58 /* rtcGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rtcGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC8DD12F1EFAF80A0061DE58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC8DD1331EFAF80A0061DE58 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				EC8DD14B1EFFC90A0061DE58 /* FirstViewController.swift */,
 				EC8DD1331EFAF80A0061DE58 /* SecondViewController.swift */,
 				EC8DD1431EFAF8230061DE58 /* ThirdViewController.swift */,
+				EC7F0FB11F115FA800F8AAAE /* LoginViewController.swift */,
 				ECDAA0461F0BE7110026825A /* ContentViewController.swift */,
 				EC8DD1611F027BC10061DE58 /* LocationManager.swift */,
 				EC8DD14D1EFFD1870061DE58 /* CustomTableViewCell.xib */,
@@ -242,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC7F0FB21F115FA800F8AAAE /* LoginViewController.swift in Sources */,
 				ECDAA0471F0BE7110026825A /* ContentViewController.swift in Sources */,
 				EC8DD1341EFAF80A0061DE58 /* SecondViewController.swift in Sources */,
 				EC8DD1301EFAF80A0061DE58 /* AppDelegate.swift in Sources */,

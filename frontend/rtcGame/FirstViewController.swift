@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 
 struct userInfo {
     var iconImageName : String
@@ -35,17 +36,43 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableViewSetting()
         refreshControl.addTarget(self, action: #selector(self.refresh), for: .valueChanged)
         refreshControl.attributedTitle = NSAttributedString(string: ">w<")
         myTableView.addSubview(refreshControl)
         refresh()
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        DispatchQueue.global().async {
+            DispatchQueue.main.async(execute: {
+                self.checkLogIn()
+            })
+        }
+    }
+    
+    
+    // MARK: - Function
+    func checkLogIn() {
+        
+        print(">> OAO")
+        
+        // Check Is Log In
+        if FBSDKAccessToken.current() == nil {
+            
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            self.present(vc, animated: true, completion: nil)
+        }
+        else {
+            print("haha")
+        }
     }
     
     func tableViewSetting() {
@@ -68,6 +95,7 @@ class FirstViewController: UIViewController {
         myTableView.reloadData()
         refreshControl.endRefreshing()
     }
+    
     
 }
 
@@ -116,6 +144,18 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource, Custo
         vc.content = self.contentList[row]
         vc.modalTransitionStyle = .crossDissolve
         present(vc, animated: true, completion: nil)
+    }
+    
+    func didClickOption() {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let sendMessageAction = UIAlertAction(title: "Send Message", style: .destructive, handler: nil)
+        alertController.addAction(sendMessageAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
 
 }
