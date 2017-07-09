@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
 class ThirdViewController: UIViewController {
     
@@ -19,7 +20,7 @@ class ThirdViewController: UIViewController {
     @IBOutlet var theDogTag: UIButton!
     @IBOutlet var theCatTag: UIButton!
     @IBOutlet var theBirdTag: UIButton!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +33,7 @@ class ThirdViewController: UIViewController {
         btnSetting(btn: theDogTag)
         btnSetting(btn: theCatTag)
         btnSetting(btn: theBirdTag)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,4 +79,29 @@ class ThirdViewController: UIViewController {
         }
         
     }
+    
+    @IBAction func logOutAction(_ sender: Any) {
+        
+        let alertController = UIAlertController(title: "Log Out", message: "If you log out, it will clean all your infomation from this device.\nAre you sure?", preferredStyle: .alert)
+        
+        let logOutAction = UIAlertAction(title: "log out", style: .default) { (action) in
+            FBSDKLoginManager().logOut()
+            
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            
+            DispatchQueue.global().async {
+                DispatchQueue.main.async(execute: {
+                    self.present(vc, animated: true, completion: nil)
+                })
+            }
+        }
+        alertController.addAction(logOutAction)
+        
+        let cancelAction = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
 }
+
