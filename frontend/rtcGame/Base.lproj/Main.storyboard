@@ -56,7 +56,7 @@
             </objects>
             <point key="canvasLocation" x="-1455" y="782.74647887323943"/>
         </scene>
-        <!--First-->
+        <!--First View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="rtcGame" customModuleProvider="target" sceneMemberID="viewController">
@@ -86,7 +86,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="481"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XV4-gp-iPY" id="GOT-OL-pdH">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="480.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -108,7 +108,9 @@
                             <constraint firstItem="OYS-Ra-PGa" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="o88-Zk-jiT"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="" image="appp-1" id="acW-dT-cKf">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="myTableView" destination="otJ-Tn-or3" id="oRW-zV-NTH"/>
                     </connections>
@@ -117,7 +119,7 @@
             </objects>
             <point key="canvasLocation" x="-705" y="782"/>
         </scene>
-        <!--Second-->
+        <!--Second View Controller-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="rtcGame" customModuleProvider="target" sceneMemberID="viewController">
@@ -162,7 +164,9 @@
                             <constraint firstAttribute="trailing" secondItem="YdI-94-2TH" secondAttribute="trailing" id="tgf-Ur-rh5"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="" image="appp-2" id="cPa-gy-q4n">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="myCollectionView" destination="YdI-94-2TH" id="mSy-bq-vyn"/>
                     </connections>
@@ -171,7 +175,7 @@
             </objects>
             <point key="canvasLocation" x="-2.3999999999999999" y="781.25937031484261"/>
         </scene>
-        <!--Third-->
+        <!--Third View Controller-->
         <scene sceneID="mc3-m2-Jge">
             <objects>
                 <viewController id="R5h-3F-e4e" customClass="ThirdViewController" customModule="rtcGame" customModuleProvider="target" sceneMemberID="viewController">
@@ -189,13 +193,7 @@
                                     <constraint firstAttribute="height" constant="53" id="JjV-Pv-epM"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="User Info" id="ufs-rO-zou">
-                                        <barButtonItem key="rightBarButtonItem" title="log out" id="BIl-8K-UhP">
-                                            <connections>
-                                                <action selector="logoutAction:" destination="R5h-3F-e4e" id="gcI-yF-3dm"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="User Info" id="ufs-rO-zou"/>
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F6m-BC-hjQ">
@@ -355,7 +353,9 @@
                             <constraint firstItem="xAJ-De-9Fr" firstAttribute="top" secondItem="6zl-ce-soY" secondAttribute="bottom" id="xWI-QC-qjo"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Third" id="Bbg-B1-4B0"/>
+                    <tabBarItem key="tabBarItem" title="" image="appp-3" id="Bbg-B1-4B0">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="theBirdTag" destination="uqh-F5-HfH" id="0Ax-7h-DIg"/>
                         <outlet property="theCatTag" destination="gBn-t9-qMo" id="lff-Cc-6nU"/>
@@ -432,7 +432,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jZt-tX-RBn">
                                         <rect key="frame" x="133" y="0.0" width="117" height="90"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="hihi" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IMH-Jc-0G9">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IMH-Jc-0G9">
                                                 <rect key="frame" x="0.0" y="0.0" width="117" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="SDP-LR-BfO"/>
@@ -441,7 +441,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="dog" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9y7-Z2-WBH">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9y7-Z2-WBH">
                                                 <rect key="frame" x="0.0" y="30" width="117" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="86G-ew-0Uj"/>
@@ -482,6 +482,7 @@
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -499,4 +500,10 @@
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="appp-1" width="45" height="45"/>
+        <image name="appp-2" width="45" height="45"/>
+        <image name="appp-3" width="45" height="45"/>
+    </resources>
+    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

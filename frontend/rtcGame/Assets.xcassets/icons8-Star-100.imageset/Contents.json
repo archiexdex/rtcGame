@@ -2,7 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "second.pdf"
+      "filename" : "icons8-Star-100.png",
+      "scale" : "1x"
     }
   ],
   "info" : {

@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="blD-jk-kDO" id="eEU-Tv-Aek">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="479.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="479"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dmf-da-vPf">
@@ -36,7 +36,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="theOption0" translatesAutoresizingMaskIntoConstraints="NO" id="bPI-Eu-LQM">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-Shooting Stars_100" translatesAutoresizingMaskIntoConstraints="NO" id="bPI-Eu-LQM">
                         <rect key="frame" x="287" y="21" width="25" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
@@ -65,20 +65,16 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Di1-yg-P9z">
-                        <rect key="frame" x="8" y="354" width="30" height="30"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WHu-Ue-wmb">
+                        <rect key="frame" x="8" y="358" width="30" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <gestureRecognizers/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </imageView>
                 </subviews>
             </tableViewCellContentView>
             <connections>
                 <outlet property="theContentLabel" destination="gnq-i9-nU8" id="fgA-ql-Sv4"/>
                 <outlet property="theImage" destination="fMb-Lh-Qec" id="mMD-Yp-Oxm"/>
-                <outlet property="theLikeImage" destination="Di1-yg-P9z" id="uV7-HG-8gw"/>
+                <outlet property="theLikeImage" destination="WHu-Ue-wmb" id="Zxy-or-vUU"/>
                 <outlet property="theLikeLabel" destination="9kh-D6-gE1" id="kR3-gP-TQG"/>
                 <outlet property="theLocationLabel" destination="fON-3S-Bor" id="BVp-iC-vwc"/>
                 <outlet property="theOptionView" destination="bPI-Eu-LQM" id="Ga2-CY-Wy8"/>
@@ -90,6 +86,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="theOption0" width="50" height="50"/>
+        <image name="icons8-Shooting Stars_100" width="100" height="100"/>
     </resources>
 </document>
