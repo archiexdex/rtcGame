@@ -68,5 +68,10 @@
 	<string>I wanna use your photolibrary</string>
 	<key>NSCameraUsageDescription</key>
 	<string>I wanna use your Camera</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

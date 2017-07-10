@@ -12,7 +12,7 @@ class SecondViewController: UIViewController {
 
     @IBOutlet var myCollectionView: UICollectionView!
     
-    
+    var dataList : [Data] = []
     var list = ["Hello world", "Swift", "UITableView"]
     var imgList = ["kanahara", "snoopy", "lalabare"]
     var slides : [UIImageView] = []
@@ -68,18 +68,21 @@ extension SecondViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return list.count
+        return dataList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CustomCollectionViewCell
         
-        cell.theImageView.image = UIImage(named: self.imgList[indexPath.row])
-        cell.theLabel.text = self.list[indexPath.row]
+        if dataList.count > 0 {
+            cell.theImageView.image = UIImage(named: self.dataList[indexPath.row].image)
+            cell.theLabel.text = self.dataList[indexPath.row].image
+            
+            // Set image fit
+            cell.theImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            cell.contentMode = .scaleAspectFit
+        }
         
-        // Set image fit
-        cell.theImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        cell.contentMode = .scaleAspectFit
         
         return cell
     }

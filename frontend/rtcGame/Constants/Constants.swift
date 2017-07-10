@@ -13,8 +13,8 @@ class Constants {
     struct api {
         enum serviceType:String {
             
-            case getPost    = "/post/get"
-            case savePost   = "/post/save"
+            case getPost    = "get"
+            case savePost   = "save"
         }
         
         enum protocolType:String {
@@ -26,7 +26,7 @@ class Constants {
         }
         
         enum url : String {
-            case production = "http://rtcgame.xdex.nctu.me"
+            case production = "http://rtcgame.xdex.nctu.me:7222/post/"
         }
         
     }

@@ -13,13 +13,14 @@ class ThirdViewController: UIViewController {
     
     
     @IBOutlet var thePetImage: UIImageView!
-    @IBOutlet var theUserImage: UIImageView!
+    @IBOutlet var theUserImage: UIWebView!
     @IBOutlet var thePetName: UILabel!
     @IBOutlet var thePetType: UILabel!
     @IBOutlet var thePetGender: UILabel!
     @IBOutlet var theDogTag: UIButton!
     @IBOutlet var theCatTag: UIButton!
     @IBOutlet var theBirdTag: UIButton!
+    @IBOutlet var theEmail: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,17 +28,20 @@ class ThirdViewController: UIViewController {
         let name = UserDefaults.standard.string(forKey: "NAME")
         let type = UserDefaults.standard.string(forKey: "TYPE")
         let gender = UserDefaults.standard.string(forKey: "GENDER")
+        let email = UserDefaults.standard.string(forKey: "EMAIL")
         
         thePetName.text = thePetName.text! + name!
         thePetType.text = thePetType.text! + type!
         thePetGender.text = thePetGender.text! + gender!
-        
+        theEmail.text = email
         
         theUserImage.clipsToBounds = true
         theUserImage.layoutIfNeeded()
         theUserImage.layer.cornerRadius = theUserImage.frame.height / 2
-        theUserImage.image = UIImage(named: "snoopy")
-        thePetImage.image = UIImage(named: "kanahara")
+        
+        let url = URL(string: UserDefaults.standard.string(forKey: "URL")!)
+        let request = URLRequest(url: url!)
+        theUserImage.loadRequest(request)
         
         btnSetting(btn: theDogTag)
         btnSetting(btn: theCatTag)
@@ -113,4 +117,10 @@ class ThirdViewController: UIViewController {
         
     }
 }
+
+//extension ThirdViewController : UIWebViewDelegate {
+//    func webViewDidFinishLoad(_ webView: UIWebView) {
+//        let html = theUserImage.stringByEvaluatingJavaScript(from: "document.body.innerHTML")
+//    }
+//}
 

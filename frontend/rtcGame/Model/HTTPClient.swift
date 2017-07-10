@@ -12,14 +12,10 @@ import SwiftyJSON
 
 class HTTPClient {
     
-    func httpRequest(parameters : [String:AnyObject]?, callback: (_ message:String , _ data:[AnyObject]?) -> Void ){
+    func httpRequest(type: String, parameters : [String:AnyObject]?, callback: (_ message:String , _ data:[String:AnyObject]?) -> Void ){
         
-        Alamofire.request("http://httpbin.org/post", method: .post, parameters: parameters).responseJSON { (response) in
-            //
-            let json = response.result.value
-            
-            
-        }
+        
+        
     }
     
 }

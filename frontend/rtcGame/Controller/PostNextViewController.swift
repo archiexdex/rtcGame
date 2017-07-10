@@ -30,7 +30,9 @@ class PostNextViewController: UIViewController {
         var image = UIImage()
         let imageAsset = PHAsset.fetchAssets(with: .image, options: nil).lastObject
         
-        let size = CGSize(width: (imageAsset?.pixelWidth)!, height: (imageAsset?.pixelHeight)!)
+//        let size = CGSize(width: (imageAsset?.pixelWidth)!, height: (imageAsset?.pixelHeight)!)
+        
+        let size = CGSize(width: 320, height: 280)
         PHImageManager.default().requestImage(for: imageAsset!, targetSize: size, contentMode: .default, options: nil) { (_image, nil) in
             image = _image!
         }
@@ -40,9 +42,12 @@ class PostNextViewController: UIViewController {
     
     @IBAction func doneAction(_ sender: Any) {
         print(".....")
+        
+        
+        
         let vc = storyboard?.instantiateViewController(withIdentifier: "FirstViewController") as! FirstViewController
         self.present(vc, animated: true, completion: nil)
-//        self.dismiss(animated: true, completion: nil)
+        
     }
 
 }

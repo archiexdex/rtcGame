@@ -36,6 +36,15 @@ class LoginViewController: UIViewController {
     }
     
 
+    @IBAction func dd(_ sender: Any) {
+        
+        let data : [String:AnyObject] = ["name":"QQ" as AnyObject, "age":22 as AnyObject]
+        HTTPClient().httpRequest(type: Constants.api.serviceType.getPost.rawValue, parameters: data) { (message, parameter) in
+            print(">>message ", message)
+            print(">>parameter ",parameter)
+        }
+        
+    }
     /*
     // MARK: - Navigation
 
@@ -64,6 +73,7 @@ class LoginViewController: UIViewController {
                     
                     let email = resultNew["email"] as! String
                     print("email : ", email)
+                    UserDefaults.standard.setValue(email, forKey: "EMAIL")
                     
                     let firstName = resultNew["first_name"] as! String
                     print("firstName : ", firstName)
@@ -75,6 +85,7 @@ class LoginViewController: UIViewController {
                         let data = picture["data"] as? NSDictionary,
                         let url = data["url"] as? String {
                         print("url : ", url)
+                        UserDefaults.standard.setValue(url, forKey: "URL")
                     }
                 }
             }

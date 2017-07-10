@@ -8,6 +8,9 @@
 
 import UIKit
 import FBSDKCoreKit
+import Alamofire
+import SwiftyJSON
+
 
 struct userInfo {
     var iconImageName : String
@@ -33,6 +36,8 @@ class FirstViewController: UIViewController {
                        "22Swift\n haha\n  @W@\n %%~~",
                        "UITableView\nis\ngarbage"]
     var imgList = ["aaa", "snoopy", "lalabare"]
+    
+    var postList : [Post] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,7 +96,21 @@ class FirstViewController: UIViewController {
     func refresh() {
         
         print(">> refreshing...")
-        usrName = ["Q", "W", "E"]
+        
+        let url = "http://rtcgame.xdex.nctu.me:7222/posts/get/"
+        
+        Alamofire.request(url, method: .post).responseJSON { response in
+            print(">>Request: \(String(describing: response.request))")   // original url request
+            print(">>Response: \(String(describing: response.response))") // http url response
+            print(">>Result: \(response.result)")                         // response serialization result
+            
+            if let json = (response.result.value) {
+                print(">>JSON: \(json)") // serialized json response
+            }
+            
+            
+        }
+        
         myTableView.reloadData()
         refreshControl.endRefreshing()
     }
@@ -110,32 +129,35 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource, Custo
     
     //Require
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.contentList.count
+        return self.postList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
         
         cell.delegate = self
+        print(">>", postList.count)
+        if postList.count > 0 {
+            cell.theUserIconImage.image = UIImage(named: self.postList[indexPath.row].iconImageName)
+            cell.theUserIDLabel.text = self.postList[indexPath.row].id
+            cell.theLocationLabel.text = self.postList[indexPath.row].location
+            cell.theImage.image = UIImage(named: self.postList[indexPath.row].imageName)
+            cell.theLikeLabel.text = self.postList[indexPath.row].like
+            
+            cell.theTimeLabel.text = self.postList[indexPath.row].time
+            
+            cell.theContentLabel.text = self.postList[indexPath.row].content
+            
+            // Set icon circle
+            cell.layoutIfNeeded()
+            cell.theUserIconImage.layer.cornerRadius = cell.theUserIconImage.frame.height / 2
+            
+            // Set image fit
+            cell.theImage.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            cell.contentMode = .scaleAspectFit
+            //        cell.theImage.clipsToBounds = true
+        }
         
-        cell.theUserIconImage.image = UIImage(named: self.imgList[indexPath.row])
-        cell.theUserIDLabel.text = self.usrName[indexPath.row]
-        cell.theLocationLabel.text = self.locationList[indexPath.row]
-        cell.theImage.image = UIImage(named: self.imgList[indexPath.row])
-        cell.theLikeLabel.text = self.like
-        
-        cell.theTimeLabel.text = self.time
-        
-        cell.theContentLabel.text = self.contentList[indexPath.row]
-
-        // Set icon circle
-        cell.layoutIfNeeded()
-        cell.theUserIconImage.layer.cornerRadius = cell.theUserIconImage.frame.height / 2
-
-        // Set image fit
-        cell.theImage.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        cell.contentMode = .scaleAspectFit
-//        cell.theImage.clipsToBounds = true
         
         return cell
     }
