@@ -8,43 +8,43 @@
 
 /* Begin PBXBuildFile section */
 		02E6EB4D2BF7A3D898C8A499 /* Pods_rtcGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F452873875136F6E0CC25386 /* Pods_rtcGame.framework */; };
-		EC7F0FB21F115FA800F8AAAE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7F0FB11F115FA800F8AAAE /* LoginViewController.swift */; };
-		EC8DD1301EFAF80A0061DE58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8DD12F1EFAF80A0061DE58 /* AppDelegate.swift */; };
-		EC8DD1341EFAF80A0061DE58 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8DD1331EFAF80A0061DE58 /* SecondViewController.swift */; };
+		EC2907061F132FB700358B28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2906F91F132FB700358B28 /* AppDelegate.swift */; };
+		EC2907071F132FB700358B28 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2906FA1F132FB700358B28 /* ContentViewController.swift */; };
+		EC2907081F132FB700358B28 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2906FB1F132FB700358B28 /* FirstViewController.swift */; };
+		EC2907091F132FB700358B28 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2906FC1F132FB700358B28 /* LoginViewController.swift */; };
+		EC29070A1F132FB700358B28 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2906FD1F132FB700358B28 /* SecondViewController.swift */; };
+		EC29070B1F132FB700358B28 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2906FE1F132FB700358B28 /* ThirdViewController.swift */; };
+		EC29070C1F132FB700358B28 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2907001F132FB700358B28 /* LocationManager.swift */; };
+		EC29070D1F132FB700358B28 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2907021F132FB700358B28 /* CustomCollectionViewCell.swift */; };
+		EC29070E1F132FB700358B28 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2907031F132FB700358B28 /* CustomCollectionViewCell.xib */; };
+		EC29070F1F132FB700358B28 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2907041F132FB700358B28 /* CustomTableViewCell.swift */; };
+		EC2907101F132FB700358B28 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2907051F132FB700358B28 /* CustomTableViewCell.xib */; };
 		EC8DD1371EFAF80A0061DE58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC8DD1351EFAF80A0061DE58 /* Main.storyboard */; };
 		EC8DD1391EFAF80A0061DE58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC8DD1381EFAF80A0061DE58 /* Assets.xcassets */; };
 		EC8DD13C1EFAF80A0061DE58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC8DD13A1EFAF80A0061DE58 /* LaunchScreen.storyboard */; };
-		EC8DD1441EFAF8230061DE58 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8DD1431EFAF8230061DE58 /* ThirdViewController.swift */; };
-		EC8DD14C1EFFC90A0061DE58 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8DD14B1EFFC90A0061DE58 /* FirstViewController.swift */; };
-		EC8DD14E1EFFD1870061DE58 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC8DD14D1EFFD1870061DE58 /* CustomTableViewCell.xib */; };
-		EC8DD1501EFFD6EB0061DE58 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8DD14F1EFFD6EB0061DE58 /* CustomTableViewCell.swift */; };
-		EC8DD15A1EFFE9A20061DE58 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8DD1591EFFE9A20061DE58 /* CustomCollectionViewCell.swift */; };
-		EC8DD15C1EFFF14E0061DE58 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC8DD15B1EFFF14E0061DE58 /* CustomCollectionViewCell.xib */; };
-		EC8DD1621F027BC10061DE58 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8DD1611F027BC10061DE58 /* LocationManager.swift */; };
 		EC8DD1651F027BDF0061DE58 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8DD1641F027BDF0061DE58 /* CoreLocation.framework */; };
-		ECDAA0471F0BE7110026825A /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDAA0461F0BE7110026825A /* ContentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7B9558E41749BE72DDEB64BC /* Pods-rtcGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rtcGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rtcGame/Pods-rtcGame.debug.xcconfig"; sourceTree = "<group>"; };
 		C741331844B1CE5DD0081D10 /* Pods-rtcGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rtcGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-rtcGame/Pods-rtcGame.release.xcconfig"; sourceTree = "<group>"; };
-		EC7F0FB11F115FA800F8AAAE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EC2906F91F132FB700358B28 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC2906FA1F132FB700358B28 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		EC2906FB1F132FB700358B28 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		EC2906FC1F132FB700358B28 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EC2906FD1F132FB700358B28 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		EC2906FE1F132FB700358B28 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		EC2907001F132FB700358B28 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		EC2907021F132FB700358B28 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		EC2907031F132FB700358B28 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
+		EC2907041F132FB700358B28 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		EC2907051F132FB700358B28 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		EC8DD12C1EFAF80A0061DE58 /* rtcGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rtcGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC8DD12F1EFAF80A0061DE58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EC8DD1331EFAF80A0061DE58 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		EC8DD1361EFAF80A0061DE58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC8DD1381EFAF80A0061DE58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC8DD13B1EFAF80A0061DE58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC8DD13D1EFAF80A0061DE58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC8DD1431EFAF8230061DE58 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		EC8DD14B1EFFC90A0061DE58 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		EC8DD14D1EFFD1870061DE58 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
-		EC8DD14F1EFFD6EB0061DE58 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		EC8DD1591EFFE9A20061DE58 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
-		EC8DD15B1EFFF14E0061DE58 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
-		EC8DD1611F027BC10061DE58 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		EC8DD1641F027BDF0061DE58 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		ECDAA0461F0BE7110026825A /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		F452873875136F6E0CC25386 /* Pods_rtcGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rtcGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -70,6 +70,38 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EC2906F81F132FB700358B28 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EC2906F91F132FB700358B28 /* AppDelegate.swift */,
+				EC2906FA1F132FB700358B28 /* ContentViewController.swift */,
+				EC2906FB1F132FB700358B28 /* FirstViewController.swift */,
+				EC2906FC1F132FB700358B28 /* LoginViewController.swift */,
+				EC2906FD1F132FB700358B28 /* SecondViewController.swift */,
+				EC2906FE1F132FB700358B28 /* ThirdViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EC2906FF1F132FB700358B28 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC2907001F132FB700358B28 /* LocationManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EC2907011F132FB700358B28 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC2907021F132FB700358B28 /* CustomCollectionViewCell.swift */,
+				EC2907031F132FB700358B28 /* CustomCollectionViewCell.xib */,
+				EC2907041F132FB700358B28 /* CustomTableViewCell.swift */,
+				EC2907051F132FB700358B28 /* CustomTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EC8DD1231EFAF80A0061DE58 = {
 			isa = PBXGroup;
 			children = (
@@ -91,17 +123,9 @@
 		EC8DD12E1EFAF80A0061DE58 /* rtcGame */ = {
 			isa = PBXGroup;
 			children = (
-				EC8DD12F1EFAF80A0061DE58 /* AppDelegate.swift */,
-				EC8DD14B1EFFC90A0061DE58 /* FirstViewController.swift */,
-				EC8DD1331EFAF80A0061DE58 /* SecondViewController.swift */,
-				EC8DD1431EFAF8230061DE58 /* ThirdViewController.swift */,
-				EC7F0FB11F115FA800F8AAAE /* LoginViewController.swift */,
-				ECDAA0461F0BE7110026825A /* ContentViewController.swift */,
-				EC8DD1611F027BC10061DE58 /* LocationManager.swift */,
-				EC8DD14D1EFFD1870061DE58 /* CustomTableViewCell.xib */,
-				EC8DD14F1EFFD6EB0061DE58 /* CustomTableViewCell.swift */,
-				EC8DD15B1EFFF14E0061DE58 /* CustomCollectionViewCell.xib */,
-				EC8DD1591EFFE9A20061DE58 /* CustomCollectionViewCell.swift */,
+				EC2906F81F132FB700358B28 /* Controller */,
+				EC2906FF1F132FB700358B28 /* Model */,
+				EC2907011F132FB700358B28 /* View */,
 				EC8DD1351EFAF80A0061DE58 /* Main.storyboard */,
 				EC8DD1381EFAF80A0061DE58 /* Assets.xcassets */,
 				EC8DD13A1EFAF80A0061DE58 /* LaunchScreen.storyboard */,
@@ -184,9 +208,9 @@
 			files = (
 				EC8DD13C1EFAF80A0061DE58 /* LaunchScreen.storyboard in Resources */,
 				EC8DD1391EFAF80A0061DE58 /* Assets.xcassets in Resources */,
-				EC8DD14E1EFFD1870061DE58 /* CustomTableViewCell.xib in Resources */,
-				EC8DD15C1EFFF14E0061DE58 /* CustomCollectionViewCell.xib in Resources */,
 				EC8DD1371EFAF80A0061DE58 /* Main.storyboard in Resources */,
+				EC2907101F132FB700358B28 /* CustomTableViewCell.xib in Resources */,
+				EC29070E1F132FB700358B28 /* CustomCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,15 +269,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC7F0FB21F115FA800F8AAAE /* LoginViewController.swift in Sources */,
-				ECDAA0471F0BE7110026825A /* ContentViewController.swift in Sources */,
-				EC8DD1341EFAF80A0061DE58 /* SecondViewController.swift in Sources */,
-				EC8DD1301EFAF80A0061DE58 /* AppDelegate.swift in Sources */,
-				EC8DD15A1EFFE9A20061DE58 /* CustomCollectionViewCell.swift in Sources */,
-				EC8DD1501EFFD6EB0061DE58 /* CustomTableViewCell.swift in Sources */,
-				EC8DD14C1EFFC90A0061DE58 /* FirstViewController.swift in Sources */,
-				EC8DD1441EFAF8230061DE58 /* ThirdViewController.swift in Sources */,
-				EC8DD1621F027BC10061DE58 /* LocationManager.swift in Sources */,
+				EC29070F1F132FB700358B28 /* CustomTableViewCell.swift in Sources */,
+				EC2907091F132FB700358B28 /* LoginViewController.swift in Sources */,
+				EC2907081F132FB700358B28 /* FirstViewController.swift in Sources */,
+				EC2907071F132FB700358B28 /* ContentViewController.swift in Sources */,
+				EC29070D1F132FB700358B28 /* CustomCollectionViewCell.swift in Sources */,
+				EC29070C1F132FB700358B28 /* LocationManager.swift in Sources */,
+				EC29070A1F132FB700358B28 /* SecondViewController.swift in Sources */,
+				EC29070B1F132FB700358B28 /* ThirdViewController.swift in Sources */,
+				EC2907061F132FB700358B28 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
