@@ -23,7 +23,16 @@ class ThirdViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let name = UserDefaults.standard.string(forKey: "NAME")
+        let type = UserDefaults.standard.string(forKey: "TYPE")
+        let gender = UserDefaults.standard.string(forKey: "GENDER")
+        
+        thePetName.text = thePetName.text! + name!
+        thePetType.text = thePetType.text! + type!
+        thePetGender.text = thePetGender.text! + gender!
+        
+        
         theUserImage.clipsToBounds = true
         theUserImage.layoutIfNeeded()
         theUserImage.layer.cornerRadius = theUserImage.frame.height / 2

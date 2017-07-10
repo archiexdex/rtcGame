@@ -96,6 +96,11 @@ class FirstViewController: UIViewController {
         refreshControl.endRefreshing()
     }
     
+    @IBAction func postAction(_ sender: Any) {
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "navigationController")
+        self.present(vc!, animated: true, completion: nil)
+    }
     
 }
 

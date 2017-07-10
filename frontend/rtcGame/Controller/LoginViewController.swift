@@ -14,6 +14,10 @@ import Alamofire
 class LoginViewController: UIViewController {
 
     
+    @IBOutlet var thePetName: UITextField!
+    @IBOutlet var thePetType: UITextField!
+    @IBOutlet var thePetGender: UISegmentedControl!
+    
     @IBOutlet var faceBookLogInButton: FBSDKLoginButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,10 +106,19 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
             print("log in successful")
         }
         
+        let name = self.thePetName.text
+        let type = self.thePetType.text
+        let gender = self.thePetGender.selectedSegmentIndex
+        
+        UserDefaults.standard.setValue(name, forKey: "NAME")
+        UserDefaults.standard.setValue(type, forKey: "TYPE")
+        UserDefaults.standard.setValue(gender, forKey: "GENDER")
+        
         DispatchQueue.global().async {
             DispatchQueue.main.async(execute: {
                 self.dismiss(animated: true) {
                     //
+                    
                     print("go back")
                 }
             })
