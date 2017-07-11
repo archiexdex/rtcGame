@@ -90,7 +90,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="481"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XV4-gp-iPY" id="GOT-OL-pdH">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="480.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -417,6 +417,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="oX1-xz-SHw" id="MJ9-aE-GAa"/>
+                                </connections>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Write down the description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKQ-WA-ayW">
                                 <rect key="frame" x="57" y="352" width="207" height="21"/>
@@ -429,16 +432,7 @@
                         <color key="backgroundColor" red="0.85094207525253296" green="0.98455613851547241" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="PFE-GQ-5Ue">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="0vx-f3-Dde">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YKd-oE-bcp">
-                                <rect key="frame" x="233" y="7" width="71" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Done"/>
-                                <connections>
-                                    <action selector="doneAction:" destination="oX1-xz-SHw" eventType="touchUpInside" id="J7m-IC-UXL"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="0vx-f3-Dde"/>
                     </navigationItem>
                     <connections>
                         <outlet property="theImageView" destination="xMi-Uz-Ecy" id="SKI-uk-fkp"/>
@@ -481,7 +475,7 @@
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="q31-47-6tI">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="cLm-lA-IV5">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="cancel" id="cLm-lA-IV5">
                             <connections>
                                 <action selector="backAction:" destination="ZpB-xj-Ez6" id="sgh-41-STq"/>
                             </connections>
@@ -564,7 +558,10 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="yes" returnKeyType="next"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="fKT-dV-SK8" id="fAd-Yb-fRD"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9y7-Z2-WBH">
                                                 <rect key="frame" x="0.0" y="30" width="117" height="30"/>
@@ -574,6 +571,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="fKT-dV-SK8" id="D4Y-FB-FOZ"/>
+                                                </connections>
                                             </textField>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Q8N-8d-Ds6">
                                                 <rect key="frame" x="0.0" y="60" width="117" height="31"/>

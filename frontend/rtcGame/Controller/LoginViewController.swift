@@ -22,6 +22,13 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        thePetName.delegate = self
+        thePetType.delegate = self
+        
+        let tap = UITapGestureRecognizer(target: self.view, action: Selector("endEditing:"))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
+        
         faceBookLogInButton.readPermissions = ["public_profile", "email", "user_friends"]
         faceBookLogInButton.delegate = self
         
@@ -138,4 +145,30 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
     }
 
     
+}
+
+extension LoginViewController : UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        viewMove(isUp: true, value: 100)
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        viewMove(isUp: false, value: 100)
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func viewMove(isUp: Bool, value: CGFloat) {
+        
+        let move : CGFloat = isUp ? -value : value
+        UIView.beginAnimations("animationView", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(0.3)
+        self.view.frame = self.view.frame.offsetBy(dx: 0, dy: move)
+        UIView.commitAnimations()
+        
+        
+    }
 }
