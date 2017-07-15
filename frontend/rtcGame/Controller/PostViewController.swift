@@ -23,8 +23,6 @@ class PostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        theImageView.frame = theView.frame
-        
         session.sessionPreset = AVCaptureSessionPresetPhoto
         
         if let device = AVCaptureDevice.defaultDevice(withDeviceType: .builtInWideAngleCamera, mediaType: AVMediaTypeVideo, position: .back) {
@@ -72,7 +70,7 @@ class PostViewController: UIViewController {
         
         let settings = AVCapturePhotoSettings()
         let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first
-        let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewPixelType,
+        let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewPixelType as Any,
                              kCVPixelBufferWidthKey as String: theImageView.frame.size.width,
                              kCVPixelBufferHeightKey as String: theImageView.frame.size.height,
         ] as [String:Any]
@@ -83,11 +81,6 @@ class PostViewController: UIViewController {
             output.capturePhoto(with: settings, delegate: self)
         }
         
-        
-        let vc = storyboard?.instantiateViewController(withIdentifier: "PostNextViewController") as! PostNextViewController
-        vc.theImageView = self.theImageView
-        self.navigationController?.pushViewController(vc, animated: true)
-        
     }
 }
 
@@ -95,7 +88,7 @@ extension PostViewController : AVCapturePhotoCaptureDelegate {
     func capture(_ captureOutput: AVCapturePhotoOutput, didFinishProcessingPhotoSampleBuffer photoSampleBuffer: CMSampleBuffer?, previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
         
         guard error == nil else {
-            print(error)
+            print(error as Any)
             return
         }
         
@@ -103,11 +96,17 @@ extension PostViewController : AVCapturePhotoCaptureDelegate {
         
         theImageView.image = UIImage(data: imageData!)
         
-        UIImageWriteToSavedPhotosAlbum(theImageView.image!, nil, nil, nil)
+        //UIImageWriteToSavedPhotosAlbum(theImageView.image!, nil, nil, nil)
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "PostNextViewController") as! PostNextViewController
+        vc.delegate = self
+        self.navigationController?.pushViewController(vc, animated: true)
         
     }
 }
 
-extension PostViewController: UINavigationControllerDelegate {
-    
+extension PostViewController: PostNextViewDelegate {
+    func getImage() -> UIImage? {
+        return theImageView.image
+    }
 }

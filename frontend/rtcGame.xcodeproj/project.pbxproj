@@ -431,6 +431,7 @@
 			baseConfigurationReference = 7B9558E41749BE72DDEB64BC /* Pods-rtcGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 83FK6B44G8;
 				INFOPLIST_FILE = rtcGame/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -446,6 +447,7 @@
 			baseConfigurationReference = C741331844B1CE5DD0081D10 /* Pods-rtcGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 83FK6B44G8;
 				INFOPLIST_FILE = rtcGame/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

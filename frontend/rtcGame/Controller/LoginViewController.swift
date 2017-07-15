@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
         thePetName.delegate = self
         thePetType.delegate = self
         
-        let tap = UITapGestureRecognizer(target: self.view, action: Selector("endEditing:"))
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
         
@@ -168,7 +168,6 @@ extension LoginViewController : UITextFieldDelegate {
         UIView.setAnimationDuration(0.3)
         self.view.frame = self.view.frame.offsetBy(dx: 0, dy: move)
         UIView.commitAnimations()
-        
         
     }
 }

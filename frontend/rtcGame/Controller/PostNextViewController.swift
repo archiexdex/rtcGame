@@ -9,20 +9,26 @@
 import UIKit
 import Photos
 
+protocol PostNextViewDelegate {
+    func getImage() -> UIImage?
+}
+
 class PostNextViewController: UIViewController {
 
     @IBOutlet var theImageView: UIImageView!
     @IBOutlet var theTextView: UITextView!
+    var delegate: PostNextViewDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         theTextView.delegate = self
-        let tap = UITapGestureRecognizer(target: self.view, action: Selector("endEditing:"))
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
         
-        theImageView.image = fetchPhoto()
+        theImageView.image = delegate?.getImage()
+        //theImageView.image = fetchPhoto()
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,12 +39,14 @@ class PostNextViewController: UIViewController {
     func fetchPhoto() -> UIImage {
         
         var image = UIImage()
-        let imageAsset = PHAsset.fetchAssets(with: .image, options: nil).firstObject
+        let imageAsset = PHAsset.fetchAssets(with: .image, options: nil).lastObject
+        
         
         let size = CGSize(width: (imageAsset?.pixelWidth)!, height: (imageAsset?.pixelHeight)!)
+        print(">>size \(size.width) \(size.height)")
         
 //        let size = CGSize(width: 320, height: 280)
-        PHImageManager.default().requestImage(for: imageAsset!, targetSize: size, contentMode: .default, options: nil) { (_image, nil) in
+        PHImageManager.default().requestImage(for: imageAsset!, targetSize: size, contentMode: .aspectFit, options: nil) { (_image, nil) in
             image = _image!
         }
         

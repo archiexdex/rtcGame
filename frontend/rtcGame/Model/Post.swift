@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Post {
+struct Post {
     var iconImageName : String = ""
     var id : String = ""
     var location : String = ""

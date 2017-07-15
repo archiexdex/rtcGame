@@ -8,6 +8,6 @@
 
 import UIKit
 
-class Data: NSObject {
+struct Data {
     var image : String = ""
 }
