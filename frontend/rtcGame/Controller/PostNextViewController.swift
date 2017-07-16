@@ -8,6 +8,7 @@
 
 import UIKit
 import Photos
+import Alamofire
 
 protocol PostNextViewDelegate {
     func getImage() -> UIImage?
@@ -28,7 +29,7 @@ class PostNextViewController: UIViewController {
         self.view.addGestureRecognizer(tap)
         
         theImageView.image = delegate?.getImage()
-        //theImageView.image = fetchPhoto()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,27 +37,62 @@ class PostNextViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func fetchPhoto() -> UIImage {
+//    func fetchPhoto() -> UIImage {
+//        
+//        var image = UIImage()
+//        let imageAsset = PHAsset.fetchAssets(with: .image, options: nil).lastObject
+//        
+//        
+//        let size = CGSize(width: (imageAsset?.pixelWidth)!, height: (imageAsset?.pixelHeight)!)
+//        print(">>size \(size.width) \(size.height)")
+//        
+//        PHImageManager.default().requestImage(for: imageAsset!, targetSize: size, contentMode: .aspectFit, options: nil) { (_image, nil) in
+//            image = _image!
+//        }
+//        
+//        return image
+//    }
+    
+    // MARK: - Function
+    func sendPost() {
         
-        var image = UIImage()
-        let imageAsset = PHAsset.fetchAssets(with: .image, options: nil).lastObject
+        let url = "http://xdex.nctu.me:7222/posts/save"
+        let name = UserDefaults.standard.string(forKey: "NAME")
+        let currentTime = getCurrentTime()
         
+        let parameters : [String:Any] = [
+                                        Constants.post.userID.rawValue: name!,
+                                        Constants.post.time.rawValue:currentTime,
+                                        Constants.post.content.rawValue:theTextView.text
+                                        ]
         
-        let size = CGSize(width: (imageAsset?.pixelWidth)!, height: (imageAsset?.pixelHeight)!)
-        print(">>size \(size.width) \(size.height)")
+        print(">> send data : ",parameters)
         
-//        let size = CGSize(width: 320, height: 280)
-        PHImageManager.default().requestImage(for: imageAsset!, targetSize: size, contentMode: .aspectFit, options: nil) { (_image, nil) in
-            image = _image!
+        Alamofire.request("http://xdex.nctu.me:7222/posts/save", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
+            
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            
+            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                print("Response String: \(utf8Text)") // original server data as UTF8 string
+            }
         }
-        
-        return image
+    }
+    
+    func getCurrentTime() -> String {
+        let dateFormate = DateFormatter()
+        dateFormate.dateFormat = "E, d MMM yyyy HH:mm:ss Z"
+        let date = Date()
+        var stringOfDate : String = dateFormate.string(from: date as Date)
+        stringOfDate.characters.removeLast(5)
+        print(stringOfDate)
+        return stringOfDate
     }
     
     @IBAction func doneAction(_ sender: Any) {
         print(".....")
         
-        
+        sendPost()
         
         let vc = storyboard?.instantiateViewController(withIdentifier: "FirstViewController") as! FirstViewController
         self.present(vc, animated: true, completion: nil)

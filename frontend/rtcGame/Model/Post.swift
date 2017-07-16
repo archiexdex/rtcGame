@@ -9,11 +9,11 @@
 import UIKit
 
 struct Post {
-    var iconImageName : String = ""
+//    var iconImageName : String = ""
     var id : String = ""
-    var location : String = ""
-    var imageName : String = ""
-    var like : String = ""
+//    var location : String = ""
+//    var imageName : String = ""
+//    var like : String = ""
     var time : String = ""
     var content : String = ""
 }

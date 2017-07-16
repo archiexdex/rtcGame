@@ -42,26 +42,7 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    @IBAction func dd(_ sender: Any) {
-        
-        let data : [String:AnyObject] = ["name":"QQ" as AnyObject, "age":22 as AnyObject]
-        HTTPClient().httpRequest(type: Constants.api.serviceType.getPost.rawValue, parameters: data) { (message, parameter) in
-            print(">>message ", message)
-            print(">>parameter ",parameter)
-        }
-        
-    }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
+    // MARK: - Function
     func fetchProfile() {
         
         print(">> fetch profile")

@@ -28,14 +28,6 @@ class FirstViewController: UIViewController {
     @IBOutlet var myTableView: UITableView!
     var refreshControl = UIRefreshControl()
     
-    var usrName = ["A", "B", "C"]
-    var locationList = ["taiwan", "taipei", "hsinchu"]
-    var time = "1 hour ago"
-    var like = "10 likes"
-    var contentList = ["Hello~ my name is XDEX. I am 22 years old. Snoopy, lalabare, kanahara are my best favorate thing.",  
-                       "22Swift\n haha\n  @W@\n %%~~",
-                       "UITableView\nis\ngarbage"]
-    var imgList = ["aaa", "snoopy", "lalabare"]
     
     var postList : [Post] = []
     
@@ -97,22 +89,35 @@ class FirstViewController: UIViewController {
         
         print(">> refreshing...")
         
-        let url = "http://rtcgame.xdex.nctu.me:7222/posts/get/"
+        let url = "http://xdex.nctu.me:7222/posts/get"
         
         Alamofire.request(url, method: .post).responseJSON { response in
             print(">>Request: \(String(describing: response.request))")   // original url request
             print(">>Response: \(String(describing: response.response))") // http url response
             print(">>Result: \(response.result)")                         // response serialization result
             
-            if let json = (response.result.value) {
-                print(">>JSON: \(json)") // serialized json response
+            if let _ = (response.result.value) {
+//                print(">>JSON: \(json)") // serialized json response
+                
+                self.postList = []
+                let post_list = JSON(response.result.value)
+                var tmp : Post
+                for ptr in post_list {
+                    
+                    tmp = Post(id: ptr.1["userID"].stringValue,
+                               time: ptr.1["time"].stringValue,
+                               content: ptr.1["content"].stringValue)
+                    print(tmp)
+                    self.postList.append(tmp)
+                }
+                
+                self.myTableView.reloadData()
+                self.refreshControl.endRefreshing()
+                
             }
-            
-            
         }
         
-        myTableView.reloadData()
-        refreshControl.endRefreshing()
+        
     }
     
     @IBAction func postAction(_ sender: Any) {
@@ -136,13 +141,14 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource, Custo
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
         
         cell.delegate = self
-        print(">>", postList.count)
+//        print(">>", postList.count)
+        
         if postList.count > 0 {
-            cell.theUserIconImage.image = UIImage(named: self.postList[indexPath.row].iconImageName)
+//            cell.theUserIconImage.image = UIImage(named: self.postList[indexPath.row].iconImageName)
             cell.theUserIDLabel.text = self.postList[indexPath.row].id
-            cell.theLocationLabel.text = self.postList[indexPath.row].location
-            cell.theImage.image = UIImage(named: self.postList[indexPath.row].imageName)
-            cell.theLikeLabel.text = self.postList[indexPath.row].like
+//            cell.theLocationLabel.text = self.postList[indexPath.row].location
+//            cell.theImage.image = UIImage(named: self.postList[indexPath.row].imageName)
+//            cell.theLikeLabel.text = self.postList[indexPath.row].like
             
             cell.theTimeLabel.text = self.postList[indexPath.row].time
             
@@ -168,7 +174,7 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource, Custo
             return
         }
         
-        vc.content = self.contentList[row]
+        vc.content = self.postList[row].content
         vc.modalTransitionStyle = .crossDissolve
         present(vc, animated: true, completion: nil)
     }
