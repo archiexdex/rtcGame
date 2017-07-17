@@ -22,11 +22,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zM8-iw-4tX">
-                        <rect key="frame" x="104" y="115" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="寵物" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zM8-iw-4tX">
+                        <rect key="frame" x="107" y="114.5" width="36" height="21"/>
+                        <fontDescription key="fontDescription" name="STSongti-TC-Regular" family="Songti TC" pointSize="18"/>
                         <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
+                        <color key="highlightedColor" red="0.9994240403175354" green="0.36829016393826547" blue="0.13923828181312647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <size key="shadowOffset" width="3" height="3"/>
                     </label>
                 </subviews>
             </view>

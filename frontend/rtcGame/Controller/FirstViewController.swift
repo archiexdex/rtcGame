@@ -106,7 +106,8 @@ class FirstViewController: UIViewController {
                                content: ptr.1["content"].stringValue,
                                imagePath: ptr.1["imagePath"].stringValue)
                     print(tmp)
-                    self.postList.append(tmp)
+//                    self.postList.append(tmp)
+                    self.postList.insert(tmp, at: 0)
                 }
                 
                 DispatchQueue.global().async {

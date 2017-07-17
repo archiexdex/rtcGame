@@ -69,7 +69,7 @@ class SecondViewController: UIViewController {
     
 }
 
-extension SecondViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension SecondViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout , CustomCollectionViewCellDelegate{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -82,6 +82,7 @@ extension SecondViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CustomCollectionViewCell
         
+        cell.delegate = self
         if collectionViewDataList.count > 0 {
             cell.theImageView.image = UIImage(named: self.collectionViewDataList[indexPath.row].imageName)
             cell.theLabel.text = self.collectionViewDataList[indexPath.row].content
@@ -93,6 +94,32 @@ extension SecondViewController: UICollectionViewDelegate, UICollectionViewDataSo
         
         
         return cell
+    }
+    
+    func didClick() {
+        let alertC = UIAlertController(title: "Sorry!", message: "to be continue... > <", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "ok", style: .default, handler: nil)
+        alertC.addAction(okAction)
+        self.present(alertC, animated: true, completion: nil)
+        
+//        let fullScreenSize = UIScreen.main.bounds.size
+//        let vc = UIViewController()
+//        let theView = UIView(frame: CGRect(x: 0, y: 0, width: fullScreenSize.width, height: fullScreenSize.height))
+//        self.view = theView
+//        theView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+//        
+//        let label = UILabel(frame: CGRect(x: fullScreenSize.width / 2 - 50, y: fullScreenSize.height / 2 - 50, width: 100, height: 100))
+//        label.text = "to be continue... > <"
+//        label.textColor = UIColor.black
+//        label.font = UIFont.boldSystemFont(ofSize: 24)
+//        theView.addSubview(label)
+//        
+//        let tap = UITapGestureRecognizer(target: self.view, action: #selector(self.dropOut(vc:)))
+//        tap.cancelsTouchesInView = false
+//        self.view.addGestureRecognizer(tap)
+//        
+//        self.view.addSubview(theView)
+        
     }
     
 }
