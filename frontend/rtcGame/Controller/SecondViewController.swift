@@ -12,7 +12,7 @@ class SecondViewController: UIViewController {
 
     @IBOutlet var myCollectionView: UICollectionView!
     
-    var dataList : [Data] = []
+    var collectionViewDataList : [CollectionViewData] = []
     var list = ["Hello world", "Swift", "UITableView"]
     var imgList = ["kanahara", "snoopy", "lalabare"]
     var slides : [UIImageView] = []
@@ -57,6 +57,14 @@ class SecondViewController: UIViewController {
         
         let nib = UINib(nibName: "CustomCollectionViewCell", bundle: nil)
         self.myCollectionView.register(nib, forCellWithReuseIdentifier: "Cell")
+        
+        let imageNames = ["icons8-health", "icons8-restaurant", "icons8-calendar", "icons8-game", "icons8-weather", "icons8-gift"]
+        let contents = ["寵物健康管理", "友善寵物餐廳推薦", "寵物行事曆", "寵物運動遊戲推薦", "氣象預報", "寵物新裝推薦"]
+        var tmp = CollectionViewData()
+        for i in 0..<contents.count {
+            tmp = CollectionViewData(imageName: imageNames[i], content: contents[i])
+            collectionViewDataList.append(tmp)
+        }
     }
     
 }
@@ -68,15 +76,15 @@ extension SecondViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataList.count
+        return collectionViewDataList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CustomCollectionViewCell
         
-        if dataList.count > 0 {
-            cell.theImageView.image = UIImage(named: self.dataList[indexPath.row].image)
-            cell.theLabel.text = self.dataList[indexPath.row].image
+        if collectionViewDataList.count > 0 {
+            cell.theImageView.image = UIImage(named: self.collectionViewDataList[indexPath.row].imageName)
+            cell.theLabel.text = self.collectionViewDataList[indexPath.row].content
             
             // Set image fit
             cell.theImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
