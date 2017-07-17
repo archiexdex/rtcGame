@@ -68,6 +68,7 @@ class PostNextViewController: UIViewController {
         
         print(">> send data : ",parameters)
         
+        // Send info
         Alamofire.request("http://xdex.nctu.me:7222/posts/save", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
             
             print("Request: \(String(describing: response.request))")   // original url request
@@ -77,6 +78,22 @@ class PostNextViewController: UIViewController {
                 print("Response String: \(utf8Text)") // original server data as UTF8 string
             }
         }
+        
+        let userName = UserDefaults.standard.string(forKey: "NAME")
+        
+        var imageNumber : String? = UserDefaults.standard.string(forKey: "IMAGENUMBER")
+        
+        if imageNumber == nil {
+            imageNumber = "0"
+        }
+        else {
+            imageNumber = "\(Int(imageNumber!)! + 1)"
+        }
+        
+        let imageName = userName! + "_image_" + imageNumber! + ".jpg"
+        UserDefaults.standard.setValue(imageNumber, forKey: "IMAGENUMBER")
+        // Send image
+        HTTPClient.sendImg(image: self.theImageView.image!, fileName: imageName)
     }
     
     func getCurrentTime() -> String {
