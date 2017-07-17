@@ -12,16 +12,6 @@ import Alamofire
 import SwiftyJSON
 import AlamofireImage
 
-struct userInfo {
-    var iconImageName : String
-    var id : String
-    var location : String
-    var imageName : String
-    var like : String
-    var time : String
-    var content : String
-}
-
 class FirstViewController: UIViewController {
 
     //MARK: - Variable
@@ -38,7 +28,7 @@ class FirstViewController: UIViewController {
         refreshControl.addTarget(self, action: #selector(self.refresh), for: .valueChanged)
         refreshControl.attributedTitle = NSAttributedString(string: ">w<")
         myTableView.addSubview(refreshControl)
-        refresh()
+        
         
     }
 
@@ -50,25 +40,31 @@ class FirstViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         DispatchQueue.global().async {
             DispatchQueue.main.async(execute: {
-                self.checkLogIn()
+                if self.shouldLogIn() {
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+                    self.present(vc, animated: true, completion: nil)
+                }
+                else {
+                    self.refresh()
+                }
             })
         }
     }
     
     
     // MARK: - Function
-    func checkLogIn() {
+    func shouldLogIn() -> Bool {
         
-        print(">> OAO")
+        print(">> check is login")
         
         // Check Is Log In
         if FBSDKAccessToken.current() == nil {
             
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-            self.present(vc, animated: true, completion: nil)
+            return true
         }
         else {
-            print("haha")
+            print(">> user login before")
+            return false
         }
     }
     
@@ -113,8 +109,14 @@ class FirstViewController: UIViewController {
                     self.postList.append(tmp)
                 }
                 
-                self.myTableView.reloadData()
-                self.refreshControl.endRefreshing()
+                DispatchQueue.global().async {
+                    DispatchQueue.main.async(execute: {
+                        self.myTableView.reloadData()
+                        self.refreshControl.endRefreshing()
+                    })
+                }
+                
+                
                 
             }
         }
