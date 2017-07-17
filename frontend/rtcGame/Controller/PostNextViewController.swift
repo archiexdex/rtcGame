@@ -60,10 +60,26 @@ class PostNextViewController: UIViewController {
         let name = UserDefaults.standard.string(forKey: "NAME")
         let currentTime = getCurrentTime()
         
+        // Get Image Path
+        let userName = UserDefaults.standard.string(forKey: "NAME")
+        var imageNumber : String? = UserDefaults.standard.string(forKey: "IMAGENUMBER")
+        
+        if imageNumber == nil {
+            imageNumber = "0"
+        }
+        else {
+            imageNumber = "\(Int(imageNumber!)! + 1)"
+        }
+        UserDefaults.standard.setValue(imageNumber, forKey: "IMAGENUMBER")
+        
+        let imageName = "http://xdex.nctu.me:7222/image/" + userName! + "_image_" + imageNumber! + ".jpg"
+        print(imageName)
+        
         let parameters : [String:Any] = [
                                         Constants.post.userID.rawValue: name!,
                                         Constants.post.time.rawValue:currentTime,
-                                        Constants.post.content.rawValue:theTextView.text
+                                        Constants.post.content.rawValue:theTextView.text,
+                                        Constants.post.imagePath.rawValue:imageName
                                         ]
         
         print(">> send data : ",parameters)
@@ -79,19 +95,10 @@ class PostNextViewController: UIViewController {
             }
         }
         
-        let userName = UserDefaults.standard.string(forKey: "NAME")
         
-        var imageNumber : String? = UserDefaults.standard.string(forKey: "IMAGENUMBER")
         
-        if imageNumber == nil {
-            imageNumber = "0"
-        }
-        else {
-            imageNumber = "\(Int(imageNumber!)! + 1)"
-        }
         
-        let imageName = userName! + "_image_" + imageNumber! + ".jpg"
-        UserDefaults.standard.setValue(imageNumber, forKey: "IMAGENUMBER")
+        
         // Send image
         HTTPClient.sendImg(image: self.theImageView.image!, fileName: imageName)
     }
@@ -111,8 +118,9 @@ class PostNextViewController: UIViewController {
         
         sendPost()
         
-        let vc = storyboard?.instantiateViewController(withIdentifier: "FirstViewController") as! FirstViewController
-        self.present(vc, animated: true, completion: nil)
+        let vc = storyboard?.instantiateViewController(withIdentifier: "TabBarController")
+//        self.present(vc!, animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
         
     }
 

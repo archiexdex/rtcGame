@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="blD-jk-kDO" id="eEU-Tv-Aek">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="479.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="479"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dmf-da-vPf">
@@ -45,7 +45,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45O-M9-W1W">
-                        <rect key="frame" x="165" y="354" width="148" height="30"/>
+                        <rect key="frame" x="132" y="354" width="181" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
@@ -59,22 +59,17 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnq-i9-nU8">
-                        <rect key="frame" x="8" y="392" width="305" height="67"/>
+                        <rect key="frame" x="8" y="392" width="305" height="87"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WHu-Ue-wmb">
-                        <rect key="frame" x="8" y="358" width="30" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
                 </subviews>
             </tableViewCellContentView>
             <connections>
                 <outlet property="theContentLabel" destination="gnq-i9-nU8" id="fgA-ql-Sv4"/>
                 <outlet property="theImage" destination="fMb-Lh-Qec" id="mMD-Yp-Oxm"/>
-                <outlet property="theLikeImage" destination="WHu-Ue-wmb" id="Zxy-or-vUU"/>
                 <outlet property="theLikeLabel" destination="9kh-D6-gE1" id="kR3-gP-TQG"/>
                 <outlet property="theLocationLabel" destination="fON-3S-Bor" id="BVp-iC-vwc"/>
                 <outlet property="theOptionView" destination="bPI-Eu-LQM" id="Ga2-CY-Wy8"/>

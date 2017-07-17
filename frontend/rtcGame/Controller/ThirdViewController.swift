@@ -13,7 +13,7 @@ class ThirdViewController: UIViewController {
     
     
     @IBOutlet var thePetImage: UIImageView!
-    @IBOutlet var theUserImage: UIWebView!
+    @IBOutlet var theUserImage: UIImageView!
     @IBOutlet var thePetName: UILabel!
     @IBOutlet var thePetType: UILabel!
     @IBOutlet var thePetGender: UILabel!
@@ -40,8 +40,7 @@ class ThirdViewController: UIViewController {
         theUserImage.layer.cornerRadius = theUserImage.frame.height / 2
         
         let url = URL(string: UserDefaults.standard.string(forKey: "URL")!)
-        let request = URLRequest(url: url!)
-        theUserImage.loadRequest(request)
+        theUserImage.af_setImage(withURL: url!)
         
         btnSetting(btn: theDogTag)
         btnSetting(btn: theCatTag)

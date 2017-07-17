@@ -10,7 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import Alamofire
 import SwiftyJSON
-
+import AlamofireImage
 
 struct userInfo {
     var iconImageName : String
@@ -101,12 +101,14 @@ class FirstViewController: UIViewController {
                 
                 self.postList = []
                 let post_list = JSON(response.result.value)
+                print(">> post list : ", post_list)
                 var tmp : Post
                 for ptr in post_list {
                     
                     tmp = Post(id: ptr.1["userID"].stringValue,
                                time: ptr.1["time"].stringValue,
-                               content: ptr.1["content"].stringValue)
+                               content: ptr.1["content"].stringValue,
+                               imagePath: ptr.1["imagePath"].stringValue)
                     print(tmp)
                     self.postList.append(tmp)
                 }
@@ -144,10 +146,22 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource, Custo
 //        print(">>", postList.count)
         
         if postList.count > 0 {
-//            cell.theUserIconImage.image = UIImage(named: self.postList[indexPath.row].iconImageName)
+            
+            var url : URL!
+            if postList[indexPath.row].imagePath != "" {
+                url = URL(string: postList[indexPath.row].imagePath)!
+                cell.theImage.af_setImage(withURL: url)
+            }
+            
+            if UserDefaults.standard.string(forKey: "URL") != "" {
+                url = URL(string: UserDefaults.standard.string(forKey: "URL")!)!
+                cell.theUserIconImage.af_setImage(withURL: url)
+            }
+            
+            
             cell.theUserIDLabel.text = self.postList[indexPath.row].id
 //            cell.theLocationLabel.text = self.postList[indexPath.row].location
-//            cell.theImage.image = UIImage(named: self.postList[indexPath.row].imageName)
+            
 //            cell.theLikeLabel.text = self.postList[indexPath.row].like
             
             cell.theTimeLabel.text = self.postList[indexPath.row].time

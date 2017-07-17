@@ -18,7 +18,7 @@ struct Constants {
         case content = "content"
         
         case icon = "icon"
-        case image = "image"
+        case imagePath = "imagePath"
     }
     
     
