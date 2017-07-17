@@ -1,5 +1,5 @@
 //
-//  Data.swift
+//  CollectionViewData.swift
 //  rtcGame
 //
 //  Created by HsinChih Yang on 10/07/2017.
@@ -8,6 +8,7 @@
 
 import UIKit
 
-struct Data {
-    var image : String = ""
+struct CollectionViewData {
+    var imageName : String = ""
+    var content : String = ""
 }

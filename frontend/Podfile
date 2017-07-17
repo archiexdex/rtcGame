@@ -5,6 +5,7 @@ use_frameworks!
 
 target 'rtcGame' do
     pod 'Alamofire', '~> 4.4'
+	pod 'AlamofireImage'
 	pod 'SwiftyJSON'
 	pod "GoogleMaterialIconFont"
 	pod 'FBSDKCoreKit'

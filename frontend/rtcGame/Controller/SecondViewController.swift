@@ -12,7 +12,7 @@ class SecondViewController: UIViewController {
 
     @IBOutlet var myCollectionView: UICollectionView!
     
-    var dataList : [Data] = []
+    var collectionViewDataList : [CollectionViewData] = []
     var list = ["Hello world", "Swift", "UITableView"]
     var imgList = ["kanahara", "snoopy", "lalabare"]
     var slides : [UIImageView] = []
@@ -57,26 +57,35 @@ class SecondViewController: UIViewController {
         
         let nib = UINib(nibName: "CustomCollectionViewCell", bundle: nil)
         self.myCollectionView.register(nib, forCellWithReuseIdentifier: "Cell")
+        
+        let imageNames = ["icons8-health", "icons8-restaurant", "icons8-calendar", "icons8-game", "icons8-weather", "icons8-gift"]
+        let contents = ["寵物健康管理", "友善寵物餐廳推薦", "寵物行事曆", "寵物運動遊戲推薦", "氣象預報", "寵物新裝推薦"]
+        var tmp = CollectionViewData()
+        for i in 0..<contents.count {
+            tmp = CollectionViewData(imageName: imageNames[i], content: contents[i])
+            collectionViewDataList.append(tmp)
+        }
     }
     
 }
 
-extension SecondViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension SecondViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout , CustomCollectionViewCellDelegate{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataList.count
+        return collectionViewDataList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CustomCollectionViewCell
         
-        if dataList.count > 0 {
-            cell.theImageView.image = UIImage(named: self.dataList[indexPath.row].image)
-            cell.theLabel.text = self.dataList[indexPath.row].image
+        cell.delegate = self
+        if collectionViewDataList.count > 0 {
+            cell.theImageView.image = UIImage(named: self.collectionViewDataList[indexPath.row].imageName)
+            cell.theLabel.text = self.collectionViewDataList[indexPath.row].content
             
             // Set image fit
             cell.theImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -85,6 +94,32 @@ extension SecondViewController: UICollectionViewDelegate, UICollectionViewDataSo
         
         
         return cell
+    }
+    
+    func didClick() {
+        let alertC = UIAlertController(title: "Sorry!", message: "to be continue... > <", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "ok", style: .default, handler: nil)
+        alertC.addAction(okAction)
+        self.present(alertC, animated: true, completion: nil)
+        
+//        let fullScreenSize = UIScreen.main.bounds.size
+//        let vc = UIViewController()
+//        let theView = UIView(frame: CGRect(x: 0, y: 0, width: fullScreenSize.width, height: fullScreenSize.height))
+//        self.view = theView
+//        theView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+//        
+//        let label = UILabel(frame: CGRect(x: fullScreenSize.width / 2 - 50, y: fullScreenSize.height / 2 - 50, width: 100, height: 100))
+//        label.text = "to be continue... > <"
+//        label.textColor = UIColor.black
+//        label.font = UIFont.boldSystemFont(ofSize: 24)
+//        theView.addSubview(label)
+//        
+//        let tap = UITapGestureRecognizer(target: self.view, action: #selector(self.dropOut(vc:)))
+//        tap.cancelsTouchesInView = false
+//        self.view.addGestureRecognizer(tap)
+//        
+//        self.view.addSubview(theView)
+        
     }
     
 }

@@ -26,7 +26,7 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet var theLikeLabel: UILabel!
     @IBOutlet var theTimeLabel: UILabel!
     @IBOutlet var theContentLabel: UILabel!
-    @IBOutlet var theLikeImage: UIImageView!
+//  @IBOutlet var theLikeImage: UIImageView!
     
     var delegate : CustomTableViewCellDelegate!
     
@@ -38,7 +38,7 @@ class CustomTableViewCell: UITableViewCell {
         theUserIconImage.clipsToBounds = true
         
         // Set like icon
-        likeImageSetting()
+        //likeImageSetting()
         
         // Set Content Label
         contentLabelSetting()
@@ -54,17 +54,15 @@ class CustomTableViewCell: UITableViewCell {
     }
     
     // MARK: - Function
-    func likeImageSetting() {
-//        theLikeImage.text = String.materialIcon(font: .ThumbUp)
-//        theLikeImage.font = UIFont.materialIconOfSize(size: 24)
-//        theLikeImage.textColor = .black
-        theLikeImage.image = UIImage(named: "icons8-Star-100")?.withRenderingMode(.alwaysTemplate)
-        theLikeImage.tintColor = .black
-        theLikeImage.isUserInteractionEnabled = true
-        
-        let like_tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.likeAction(_:)) )
-        theLikeImage.addGestureRecognizer(like_tapGesture)
-    }
+//    func likeImageSetting() {
+//
+//        theLikeImage.image = UIImage(named: "icons8-Star-100")?.withRenderingMode(.alwaysTemplate)
+//        theLikeImage.tintColor = .black
+//        theLikeImage.isUserInteractionEnabled = true
+//        
+//        let like_tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.likeAction(_:)) )
+//        theLikeImage.addGestureRecognizer(like_tapGesture)
+//    }
     
     
     func contentLabelSetting() {
@@ -83,16 +81,16 @@ class CustomTableViewCell: UITableViewCell {
     }
     
     // MARK: - Handler
-    func likeAction(_ gestureRecognizer: UITapGestureRecognizer) {
-        switch theLikeImage.tintColor {
-        case UIColor.black:
-            theLikeImage.image = UIImage(named: "icons8-Star Filled-100")?.withRenderingMode(.alwaysTemplate)
-            theLikeImage.tintColor = UIColor(red: 168.0 / 255, green: 111.0 / 255, blue: 76.0 / 255, alpha: 1)
-        default:
-            theLikeImage.image = UIImage(named: "icons8-Star-100")?.withRenderingMode(.alwaysTemplate)
-            theLikeImage.tintColor = .black
-        }
-    }
+//    func likeAction(_ gestureRecognizer: UITapGestureRecognizer) {
+//        switch theLikeImage.tintColor {
+//        case UIColor.black:
+//            theLikeImage.image = UIImage(named: "icons8-Star Filled-100")?.withRenderingMode(.alwaysTemplate)
+//            theLikeImage.tintColor = UIColor(red: 168.0 / 255, green: 111.0 / 255, blue: 76.0 / 255, alpha: 1)
+//        default:
+//            theLikeImage.image = UIImage(named: "icons8-Star-100")?.withRenderingMode(.alwaysTemplate)
+//            theLikeImage.tintColor = .black
+//        }
+//    }
     
     func contentAction(_ gestureRecognizer: UITapGestureRecognizer) {
         self.delegate.didClickContent()

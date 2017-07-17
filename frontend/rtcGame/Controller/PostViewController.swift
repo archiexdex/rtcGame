@@ -63,7 +63,8 @@ class PostViewController: UIViewController {
     @IBAction func backAction(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "FirstViewController") as! FirstViewController
         
-        self.present(vc, animated: true, completion: nil)
+//        self.present(vc, animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func takeButton(_ sender: Any) {
