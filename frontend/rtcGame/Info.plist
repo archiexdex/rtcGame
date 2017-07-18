@@ -49,6 +49,10 @@
 	<string>I wanna use your Camera</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>I wanna use your photolibrary</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -75,5 +79,7 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>remote-notification</key>
+	<string></string>
 </dict>
 </plist>

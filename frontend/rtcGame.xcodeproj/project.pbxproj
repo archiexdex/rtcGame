@@ -34,6 +34,7 @@
 /* Begin PBXFileReference section */
 		7B9558E41749BE72DDEB64BC /* Pods-rtcGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rtcGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rtcGame/Pods-rtcGame.debug.xcconfig"; sourceTree = "<group>"; };
 		C741331844B1CE5DD0081D10 /* Pods-rtcGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rtcGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-rtcGame/Pods-rtcGame.release.xcconfig"; sourceTree = "<group>"; };
+		EC219C6E1F1D8BC100645AFD /* rtcGame.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = rtcGame.entitlements; sourceTree = "<group>"; };
 		EC2906F91F132FB700358B28 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC2906FA1F132FB700358B28 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		EC2906FB1F132FB700358B28 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +149,7 @@
 		EC8DD12E1EFAF80A0061DE58 /* rtcGame */ = {
 			isa = PBXGroup;
 			children = (
+				EC219C6E1F1D8BC100645AFD /* rtcGame.entitlements */,
 				EC2906F81F132FB700358B28 /* Controller */,
 				EC2906FF1F132FB700358B28 /* Model */,
 				EC2907011F132FB700358B28 /* View */,
@@ -205,7 +207,15 @@
 					EC8DD12B1EFAF80A0061DE58 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 83FK6B44G8;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -431,13 +441,17 @@
 			baseConfigurationReference = 7B9558E41749BE72DDEB64BC /* Pods-rtcGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = rtcGame/rtcGame.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: com.Archie.rtcGame";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 83FK6B44G8;
 				INFOPLIST_FILE = rtcGame/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Archie.rtcGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "097f8a29-531c-4773-a55b-6bfe3b55f95d";
+				PROVISIONING_PROFILE_SPECIFIER = "RTC Game Development Profile";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -447,13 +461,16 @@
 			baseConfigurationReference = C741331844B1CE5DD0081D10 /* Pods-rtcGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = rtcGame/rtcGame.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 83FK6B44G8;
 				INFOPLIST_FILE = rtcGame/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Archie.rtcGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "097f8a29-531c-4773-a55b-6bfe3b55f95d";
+				PROVISIONING_PROFILE_SPECIFIER = "RTC Game Development Profile";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

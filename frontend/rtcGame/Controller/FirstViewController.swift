@@ -201,7 +201,10 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource, Custo
         
         let sendMessageAction = UIAlertAction(title: "Send Message", style: .destructive, handler: {
             (action) -> Void in
-            
+            let alertC = UIAlertController(title: "Sorry!", message: "to bo continue... > <", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+            alertC.addAction(okAction)
+            self.present(alertC, animated: true, completion: nil)
         })
         alertController.addAction(sendMessageAction)
         

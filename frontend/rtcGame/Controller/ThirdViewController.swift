@@ -32,7 +32,13 @@ class ThirdViewController: UIViewController {
         
         thePetName.text = thePetName.text! + name!
         thePetType.text = thePetType.text! + type!
-        thePetGender.text = thePetGender.text! + gender!
+        if gender == "0" {
+            thePetGender.text = thePetGender.text! + "Male"
+        }
+        else {
+            thePetGender.text = thePetGender.text! + "Female"
+        }
+        
         theEmail.text = email
         
         theUserImage.clipsToBounds = true

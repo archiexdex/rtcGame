@@ -8,6 +8,7 @@
 
 import UIKit
 import FBSDKCoreKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,11 +29,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            print(">> Token : ", FBSDKAccessToken.current().tokenString)
         }
         
+        
+        let settings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+        
+        application.registerUserNotificationSettings(settings)
+        application.registerForRemoteNotifications()
+        
         return true
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         return FBSDKApplicationDelegate.sharedInstance().application(app, open: url, options: options)
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let token = NSData(data: deviceToken)
+        print(">> token : ", token)
+        
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print(">> error : ", error)
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print(">> userInfo : ", userInfo)
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
